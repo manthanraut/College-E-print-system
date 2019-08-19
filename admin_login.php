@@ -24,7 +24,7 @@
 	</style>
 	<body>
 			<div class="topnav">
-					<h3><a href="http://localhost/webapp/home.php" style="float:right;">Home</a></h3>
+					<h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
 					<!--<h3><a href="http://localhost/webapp/verified.html" style="float:right;">Sign Up</a></h3>
 					<h3><a href="http://localhost/webapp/signin.html" style="float:right;">Sign In</a></h3>
               

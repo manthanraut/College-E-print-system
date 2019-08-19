@@ -69,17 +69,17 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 	</head>
 	<body>
 			<div class="topnav">
-					<h3><a href="http://localhost/webapp/home.php" style="float:right;">Home</a></h3>
-					<h3><a href="http://localhost/webapp/verified.php" style="float:right;">Sign Up</a></h3>
+					<h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
+					<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
 					
-					<h3><a href="http://localhost/webapp/admin_login.php" style="float:right;">Admin</a></h3>
+					<h3><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></h3>
 					
 				  </div>
 	<div class="loginBox">
 		
 		<img src="user.png" class="user">
 		<h2 style="font-family:cursive;">Log In Here</h2>
-		<form name="myform" action="http://localhost/webapp/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
+		<form name="myform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
 		
 			<input type="email" name = "email" id ='email' placeholder="Enter Email" required>
 		

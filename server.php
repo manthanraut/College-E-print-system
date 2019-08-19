@@ -47,7 +47,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 
 			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
-			header('location: http://localhost/webapp/home.php');
+			header('location: http://localhost/College-E-print-system/home.php');
 		}
 
 	// ... 
@@ -66,10 +66,10 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 	  #$_SESSION['fullname']=$fullname;
 	  $_SESSION['email']=$email;
       $_SESSION['success'] = "You are now logged in";
-        header( 'Location: http://localhost/webapp/userpage.php' );
+        header( 'Location: http://localhost/College-E-print-system/userpage.php' );
     }
     else{
-        header('Location: http://localhost/webapp/signin.php');
+        header('Location: http://localhost/College-E-print-system/signin.php');
         }
 }
 

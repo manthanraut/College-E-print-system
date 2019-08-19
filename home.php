@@ -84,10 +84,10 @@ footer {
         <div class="container">
           <div class="navbar_links">
             <ul class="menu">
-              <li><h3><a href="http://localhost/webapp/home.php">Home</a></h3></li>
-              <li><h3><a href="http://localhost/webapp/verified.php">Sign Up</a></h3></li>
-              <li><h3><a href="http://localhost/webapp/signin.php">Sign In</a></h3></li>
-              <li><h3><a href="http://localhost/webapp/admin_login.php" style="float:right;">Admin</a></h3></li>
+              <li><h3><a href="http://localhost/College-E-print-system/home.php">Home</a></h3></li>
+              <li><h3><a href="http://localhost/College-E-print-system/verified.php">Sign Up</a></h3></li>
+              <li><h3><a href="http://localhost/College-E-print-system/signin.php">Sign In</a></h3></li>
+              <li><h3><a href="http://localhost/College-E-print-system/admin_login.php">Admin</a></h3></li>
              
             </ul>
           </div>
@@ -123,13 +123,13 @@ footer {
             <div class="footer-left">
       
               <p class="footer-links">
-                <a href="http://localhost/webapp/home.php">Home</a>
+                <a href="http://localhost/College-E-print-system/home.php">Home</a>
                 ~
-                <a href="http://localhost/webapp/signin.php">  Sign In</a>
+                <a href="http://localhost/College-E-print-system/signin.php">  Sign In</a>
                 ~
-                <a href="http://localhost/webapp/verified.php">  Sign Up</a>
+                <a href="http://localhost/College-E-print-system/verified.php">  Sign Up</a>
                 ~
-                <a href="http://localhost/webapp/contact.php">  Contact</a>
+                <a href="http://localhost/College-E-print-system/contact.php">  Contact</a>
               </p>
       
               <p>Company Name : SAM &copy; 2019</p>

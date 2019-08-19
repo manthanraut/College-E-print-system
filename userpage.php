@@ -3,12 +3,12 @@
 
   if (!isset($_SESSION['fullname'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: http://localhost/webapp/signin.php');
+  	header('location: http://localhost/College-E-print-system/signin.php');
   }
   if (isset($_POST['logout'])) {
   	session_destroy();
   	unset($_SESSION['fullname']);
-  	header("location: http://localhost/webapp/signin.php");
+  	header("location: http://localhost/College-E-print-system/signin.php");
   }
 ?>
 <!DOCTYPE html>

@@ -138,9 +138,9 @@ small{
     </head>
     <body>
             <div class="topnav">
-                    <h3><a href="http://localhost/webapp/home.php" style="float:right;">Home</a></h3>
+                    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
                   </div>
-        <form action="http://localhost/webapp/validate1.php" method="POST" autocomplete="off">
+        <form action="http://localhost/College-E-print-system/validate1.php" method="POST" autocomplete="off">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">

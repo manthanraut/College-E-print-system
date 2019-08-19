@@ -123,11 +123,11 @@ body{
 </head>
 <body>
   <div class="topnav">
-    <h3><a href="http://localhost/webapp/home.php" style="float:right;">Home</a></h3>
-<h3><a href="http://localhost/webapp/verified.php" style="float:right;">Sign Up</a></h3>
-    <h3><a href="http://localhost/webapp/signin.php" style="float:right;">Sign In</a></h3>
-    <h3><a href="http://localhost/webapp/contact.php" style="float:right;">Contacts</a></h3>
-    <h3><a href="http://localhost/webapp/admin_login.php" style="float:right;">Admin</a></h3>
+    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
+<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
+    <h3><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></h3>
+    <h3><a href="http://localhost/College-E-print-system/contact.php" style="float:right;">Contacts</a></h3>
+    <h3><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></h3>
 
   </div>
 <div class="row">

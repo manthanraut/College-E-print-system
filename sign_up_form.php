@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,7 +36,7 @@
     color: red;
   }
   body{
-    background-image:url('computer-laptop-macbook-2506947.jpg');
+    background-image:url('imgs/computer-laptop-macbook-2506947.jpg');
     background-size:cover;
     margin:0;
 	padding:0;
@@ -214,12 +213,12 @@ function hide(obj) {
     </head>
     <body>
             <div class="topnav">
-                    <h3><a href="http://localhost/webapp/home.php" style="float:right;">Home</a></h3>
-					<h3><a href="http://localhost/webapp/verified.php" style="float:right;">Sign Up</a></h3>
-                    <h3><a href="http://localhost/webapp/signin.php" style="float:right;">Sign In</a></h3>
+                    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
+					<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
+                    <h3><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></h3>
 					
                   </div>
-        <form action="http://localhost/webapp/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
+        <form action="http://localhost/College-E-print-system/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -259,7 +258,7 @@ function hide(obj) {
                 <div class="row">
                     <label class="label col-md-2 control-label">Password: </label>
                         <input type="password" class="form-control" id="psw1" name="psw1" style="margin-left:30px;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" maxlength=20 required>
-                        <img src="icon.png" style="border-radius:10px;margin-left:10px;width:30px;height:30px;" onmouseover="show();" onmouseout="hide();" />
+                        <img src="imgs/icon.png" style="border-radius:10px;margin-left:10px;width:30px;height:30px;" onmouseover="show();" onmouseout="hide();" />
                       </div>
             <div class="row">
                 <label class="label col-md-2 control-label">Confirm </label><br><label class="label col-md-2 control-label" style="margin-top:0px;">Password: </label>
