@@ -146,7 +146,7 @@ small{
                 <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="text-left" style="text-align:center;">USER Authenticity..</h3>
+                        <h3 class="text-left" style="text-align:center;">USER verification</h3>
                     </div>
                     </div>
                     <hr>
