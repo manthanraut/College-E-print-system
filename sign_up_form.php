@@ -36,7 +36,7 @@
     color: red;
   }
   body{
-    background-image:url('imgs/computer-laptop-macbook-2506947.jpg');
+    background-color:#e6e6e6;
     background-size:cover;
     margin:0;
 	padding:0;
@@ -54,34 +54,18 @@
   font-family: montserrat;
   box-sizing: border-box;
 }
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-form{
-    color:white;
-}
 .container{
-    width: 500px;
-  height: 600px;
+    width: 400px;
+  height: 420px;
   padding: 40px 40px;
   border-radius: 10px;
   position: absolute;
   left: 20%;
-  top:50%;
-  transform: translate(-50%,-50%);
-}
+  color:black;
+  background:white;
+  top:30%;
+  opacity:.8;
+  }
 h1{
     font-size:40px;
     color:white;
@@ -95,27 +79,12 @@ h3{
     font-size:25px;
     color:white;
 }
-.col-md-5{
-    margin-top:80px;
-    box-shadow: -1px 1px 60px 10px black;
-    background: rgba(0,0,0,0.4);
-}
-.col-md-10{
-    margin-left:60px;
-    margin-top:20px;
-    top:0px;
-    bottom:40px;
-}
-.col-md-2{
-    margin-left:20px;
-    margin-top:20px;
-    top:0px;
-}
+
 .label{
     font-weight:normal;
     margin-top:15px;
     padding-left:10px;
-    color:white;
+    color:black;
     font-sizE:19px;
 }
 #btn1 {
@@ -152,10 +121,10 @@ h3{
     background: transparent;
     border-radius: 0px;
     border:0px;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid black;
     font-size:18px;
-    height:40px;
-    color:white;
+    height:30px;
+    color:black;
 }
 input[type="checkbox"]{
     margin-top:15px;
@@ -165,8 +134,36 @@ input[type="checkbox"]{
 small{
     font-size:18px;
     color:white;
-
 }
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#e60000;
+}
+
+li {
+  float: left;
+  font-size:20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color:black;
+  font-size:25px;
+
+}  
             </style>
     <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -212,63 +209,61 @@ function hide(obj) {
     <title>Registration form</title>
     </head>
     <body>
-            <div class="topnav">
-                    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
-					<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
-                    <h3><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></h3>
-					
-                  </div>
+    <ul>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+</ul>
         <form action="http://localhost/College-E-print-system/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
-        <div class="container">
+        <div class="container" style="height:500px;">
             <div class="row">
-                <div class="col-md-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="text-left" style="text-align:center;">Registration Form</h3>
+              
+                    <div>
+                        <h3 class="text-left" style="text-align:center;color:black;">Registration Form</h3>
                     </div>
-                    </div>
+                  
                     <hr>
                     <div class="row">
-                            <label class="label col-md-2 control-label">Full Name </label>
-                                <input type="text" class="form-control" name="fullname" id='fname' placeholder="fullname" style="margin-left:30px;" required>
+                            <label class="label control-label" style="color:black;">Full Name </label>
+                                <input type="text" class="form-control" name="fullname" id='fname' placeholder="fullname" style="border-bottom: 2px solid black;margin-left:30px;color:black;" required>
                     </div>
                 <div class="row">
-                        <label class="label col-md-2 control-label">Roll No.: </label>
-                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="margin-left:43px;" placeholder="Roll No." required>
+                        <label class="label control-label" style="color:black;">Roll No.: </label>
+                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="border-bottom: 2px solid black;color:black;margin-left:43px;" placeholder="Roll No." required>
                 </div>
                 <div class="row">
-                        <label class="label col-md-2 control-label" style="margin-top:10px;">Gender: </label>
+                        <label class="label control-label" style="margin-top:10px;color:black;">Gender: </label>
                         <div class="col-md-10" style="margin-left:120px;margin-top:0px;">
-                            <input type="radio" id="rd1" name="gender" value="male" style="margin-left:30px;"><small>Male</small>
-                            <input type="radio" id="rd2" name="gender" value="female" style="margin-left:20px;"><small>Female</small>
+                            <input type="radio" id="rd1" name="gender" value="male" style="margin-left:30px;"><small style="color:black;"> Male</small>
+                            <input type="radio" id="rd2" name="gender" value="female" style="margin-left:20px;"><small style="color:black;"> Female</small>
                         </div>
                 </div>
                 <div class="row">
-                    <label class="label col-md-2 control-label">Rait Mail ID: </label>
-                        <input type="Email" class="form-control" name="raitmail" style="margin-left:10px;" id='raitmailid' placeholder="Rait mail id" required>
+                    <label class="label  control-label" style="color:black;">Rait Mail ID: </label>
+                        <input type="Email" class="form-control" name="raitmail" style="color:black;margin-left:10px;border-bottom: 2px solid black;" id='raitmailid' placeholder="Rait mail id" required>
             </div>
                 <div class="row">
-                        <label class="label col-md-2 control-label">E-mail: </label>
-                            <input type="Email" class="form-control" name="Email" style="margin-left:55px;" id='mailid' placeholder="Email" required>
+                        <label class="label control-label" style="color:black;">E-mail: </label>
+                            <input type="Email" class="form-control" name="Email" style="color:black;margin-left:55px;border-bottom: 2px solid black;" id='mailid' placeholder="Email" required>
                 </div>
                 <div class="row">
-                        <label class="label col-md-2 control-label">Mobile No.: </label>
-                            <input type="tel" class="form-control" name="num" style="margin-left:15px;" id='mob' placeholder="Mobile No." maxlength=10 required>
+                        <label class="label  control-label" style="color:black;">Mobile No.: </label>
+                            <input type="tel" class="form-control" name="num" style="color:black;margin-left:15px;border-bottom: 2px solid black;" id='mob' placeholder="Mobile No." maxlength=10 required>
                 </div>
                 <div class="row">
-                    <label class="label col-md-2 control-label">Password: </label>
-                        <input type="password" class="form-control" id="psw1" name="psw1" style="margin-left:30px;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" maxlength=20 required>
+                    <label class="label control-label" style="color:black;">Password: </label>
+                        <input type="password" class="form-control" id="psw1" name="psw1" style="margin-left:30px;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" maxlength=20 required>
                         <img src="imgs/icon.png" style="border-radius:10px;margin-left:10px;width:30px;height:30px;" onmouseover="show();" onmouseout="hide();" />
                       </div>
-            <div class="row">
-                <label class="label col-md-2 control-label">Confirm </label><br><label class="label col-md-2 control-label" style="margin-top:0px;">Password: </label>
-                    <input type="password" class="form-control" id="psw2" name="psw2" style="margin-left:25px;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="confirm password" maxlength=20 required>
+            <div class="row"9>
+                <label class="label control-label" style="color:black;">Confirm </label><br><label class="label  control-label" style="margin-top:0px;color:black">Password: </label>
+                    <input type="password" class="form-control" id="psw2" name="psw2" style="margin-left:25px;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="confirm password" maxlength=20 required>
         </div>
                 <button type="submit" value="Submit" name="reg_user" id="btn1">Submit</button>
                 <button type="reset" value="Reset" id="btn2">Reset</button>
             </div>
         </div>
-        </div>
+  
         </form>
         <div id="message">
             <h3 style="color:black;">Password must contain the following:</h3>

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="footer, contact, form, icons" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -19,14 +19,13 @@
         Home Page
     </title>
 <style>
-  #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-}
 
+body{
+  background-size:cover;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow); 
+  font-family:new time roman;
+}
 footer {
   position: fixed;
   left: 0;
@@ -34,82 +33,45 @@ footer {
   width: 100%;
   height:120px;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#e60000;
+}
 
-/* Style the topnav links */
-.topnav a {
+li {
   float: left;
+  font-size:20px;
+}
+
+li a {
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
+
   padding: 14px 16px;
   text-decoration: none;
 }
-.dropbtn {
-  background-color: #3498DB;
+
+li a:hover:not(.active) {
+  background-color: white;
   color:black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 15px;
-}
-.dropup:hover .dropup-content {
-  display: block;
-}
+  font-size:25px;
 
-.dropup {
-  position: relative;
-  display: inline-block;
 }
-
-.dropup-content {
-  display: none;
-  color:black;
-  position: relative;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  bottom: 50px;
-  z-index: 1;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
 </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-          <div class="navbar_links">
-            <ul class="menu">
-              <li><h3><a href="http://localhost/College-E-print-system/home.php">Home</a></h3></li>
-              <li><h3><a href="http://localhost/College-E-print-system/verified.php">Sign Up</a></h3></li>
-              <li><h3><a href="http://localhost/College-E-print-system/signin.php">Sign In</a></h3></li>
-              <li><h3><a href="http://localhost/College-E-print-system/admin_login.php">Admin</a></h3></li>
-             
-            </ul>
-          </div>
-        </div>
-      </div>
-      <video playsinline autoplay muted loop id="myVideo">
-          <source src="imgs/tech.mp4" type="video/mp4">
-          </video>
-          <div id="intro" style="position:fixed;color:white;margin-left:220px;margin-top:100px;">
-            <h1 style="font-size:30px;">We Help to save your precious time by make your printing job easy</h1><br>
-            <div class="dropup">
-              <button class="dropbtn" style="margin-left:300px;">Click me to view procedure</button>
-              <div class="dropup-content" style="margin-left:300px;">
-                <li>Sign Up If not registered</li>
-                <li>Sign In </li>
-                <li>Upload your documents</li>
-                <li>Collect your documents from Xerox center</li>
+<ul>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+</ul>
           
-              </div>
-            </div>
-      
-          </div>
           <footer class="footer-distributed" style="opacity:.6;">
 
             <div class="footer-right">

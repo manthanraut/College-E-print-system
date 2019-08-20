@@ -2,17 +2,6 @@
 <!doctype html>
 <html>
 	<head>
-		<style>
-			body
-{
-	
-	margin:0;
-	padding:0;
-	background:url("imgs/background.jpg");
-	background-size:cover;
-	font-family: sans-serif; 
-}
-			</style>
 		<title>User Login</title>
 		<link rel="stylesheet" type="text/css"  href="css/loginuser.css">
 		<meta charset="utf-8">
@@ -41,6 +30,82 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 }   
 </script>
 <style>
+body
+{
+	
+	margin:0;
+	padding:0;
+	background-color:#e6e6e6;
+	background-size:cover;
+	font-family: sans-serif; 
+}
+h2
+{
+	margin:0;
+	padding:0 0 20px;
+	color:#1E90FF;
+	text-align:center;
+} 
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+  font-family:new time roman;
+}
+.loginBox p
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	color:#fff;
+	
+} 
+.loginBox input
+{
+	width:100%;
+	margin-bottom: 20px; 
+}
+.loginBox input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	outline:none;
+	height:40px;
+	color:black;
+	font-size: 16px;
+	
+	
+}
+
+.chk{
+	margin-left:0px;
+}
+.loginBox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height: 40px;
+	color:#fff;
+	font-size:16px;
+	background: rgb(255,38,126);
+	cursor:pointer;
+    border-radius:20px;
+    font-size:20px;
+    font-family:monospace;
+}
+
+
+.loginBox input[type="submit"]:hover
+{
+	background: #efed40;
+	color: #262626;
+}
+.loginBox a
+{
+	color: #fff;
+	font-size:14px;
+	font-weight:bold;
+} 
 .loginBox
 {
 	position:absolute;
@@ -51,49 +116,83 @@ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
 	height:440px;
 	padding:80px 40px;
 	box-sizing: border-box;
-	background:rgba(0,0,0,0.6) ;
+	background-color:white;
+	
 }
 .loginBox input[type="email"]
 {
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid black;
 	background: transparent;
 	outline:none;
 	height:40px;
-	color:#fff;
+	color:black;
 	font-size: 16px;
 	
 	
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#e60000;
+  font-family:new time roman;
+}
+
+li {
+  float: left;
+  font-size:20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color:black;
+  font-size:25px;
+
+}
+
+#ps :hover{
+
+	text-decoration:underline;
+}
 </style>
 	</head>
 	<body>
-			<div class="topnav">
-					<h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
-					<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
-					
-					<h3><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></h3>
-					
-				  </div>
+	<ul>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+</ul>
+			
 	<div class="loginBox">
 		
-		<img src="user.png" class="user">
+		<img src="imgs/user.png" class="user">
 		<h2 style="font-family:cursive;">Log In Here</h2>
 		<form name="myform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
 		
-			<input type="email" name = "email" id ='email' placeholder="Enter Email" required>
+			<input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
 		
 			<input type="password" name = "passwd" id='psw' placeholder="Enter Password" required>
 			<!--<p>Check password</p>-->
 			<table>
 				<tr>
-				   <td><div> <p style="margin-bottom:20px;">Check password</p> </div></td>
+				   <td><div> <p style="margin-bottom:20px;font-size:18px;color:black;">Check password</p> </div></td>
 				   <td><div> <input type="checkbox" style="margin-left:10px;" onclick="myFunction()"></div></td>
 				</tr>
 			 </table>
 
 			<input type="submit" name = "login_user" style="font-family:courier header;" value="Log In As User">
-			<a href="#"> Forget Password</a> 
+			<a href="#" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;">Forget Password</p></a> 
 			
 		</form>
 	</div>

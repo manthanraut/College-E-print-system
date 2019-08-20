@@ -13,39 +13,56 @@
   font-family: montserrat;
   box-sizing: border-box;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#e60000;
+  font-family:new time roman;
+}
+
+li {
+  float: left;
+  font-size:20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color:black;
+  font-size:25px;
+
+}
 
 body{
-    background-image:url('imgs/computer-laptop-macbook-2506947.jpg');
+
     background-size:cover;
     margin:0;
-	padding:0;
+    padding:0;
+    background-color:#e6e6e6;
     font-family:new time roman;
+    opacity:.7;
 }
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-form{
-    color:white;
-}
+
 .container{
     width: 500px;
-  height: 600px;
+  height: 250px;
   padding: 40px 40px;
   border-radius: 10px;
   position: absolute;
   left: 20%;
   top:50%;
+  color:black;
+  background:white;
   transform: translate(-50%,-50%);
 }
 h1{
@@ -59,24 +76,9 @@ p{
 }
 h3{
     font-size:25px;
-    color:white;
+    color:black;
 }
-.col-md-5{
-    margin-top:80px;
-    box-shadow: -1px 1px 60px 10px black;
-    background: rgba(0,0,0,0.4);
-}
-.col-md-10{
-    margin-left:60px;
-    margin-top:20px;
-    top:0px;
-    bottom:40px;
-}
-.col-md-2{
-    margin-left:20px;
-    margin-top:20px;
-    top:0px;
-}
+
 .label{
     font-weight:normal;
     margin-top:15px;
@@ -109,7 +111,7 @@ h3{
     text-align: center;
     font-size: 18px;
     margin: 4px 2px;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: 0.3s;
   }
   
@@ -118,10 +120,11 @@ h3{
     background: transparent;
     border-radius: 0px;
     border:0px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     font-size:18px;
     height:40px;
-    color:white;
+    color:black;
+
 }
 input[type="checkbox"]{
     margin-top:15px;
@@ -137,26 +140,28 @@ small{
     <title>Authentication form</title>
     </head>
     <body>
-            <div class="topnav">
-                    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
-                  </div>
+    <ul>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+</ul>
         <form action="http://localhost/College-E-print-system/validate1.php" method="POST" autocomplete="off">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+               
                 <div class="row">
-                    <div class="col-md-6">
+                    <div>
                         <h3 class="text-left" style="text-align:center;">USER verification</h3>
                     </div>
-                    </div>
+                   
                     <hr>
                 <div class="row">
-                        <label class="label col-md-2 control-label">Roll No.: </label>
+                        <label class="label control-label" style="color:black;">Roll No.: </label>
                             <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="margin-left:43px;" placeholder="Roll No." required>
                 </div>
     
                 <div class="row">
-                    <label class="label col-md-2 control-label">Rait Mail ID: </label>
+                    <label class="label control-label" style="color:black;">Rait Mail ID: </label>
                         <input type="Email" class="form-control" name="raitmail" style="margin-left:10px;" id='raitmailid' placeholder="Rait mail id" required>
             </div>
                 <button type="submit" value="Submit" id="btn1">Submit</button>

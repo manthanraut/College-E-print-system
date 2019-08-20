@@ -47,7 +47,7 @@ html {
   box-sizing: inherit;
 }
 body{
-    background-image:url(imgs/tech2.jpg);
+  background-color:white;
     background-size:cover;
     margin:0;
 	padding:0;
@@ -97,21 +97,34 @@ body{
   cursor: pointer;
   width: 100%;
 }
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#e60000;
+}
 
+li {
+  float: left;
+  font-size:20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color:black;
+  font-size:25px;
+
+}
 .button:hover {
   background-color: #555;
 }
@@ -122,14 +135,13 @@ body{
 </style>
 </head>
 <body>
-  <div class="topnav">
-    <h3><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></h3>
-<h3><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></h3>
-    <h3><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></h3>
-    <h3><a href="http://localhost/College-E-print-system/contact.php" style="float:right;">Contacts</a></h3>
-    <h3><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></h3>
-
-  </div>
+<ul>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
+</ul>
+  
 <div class="row">
   <div class="column">
     <div class="card">
@@ -164,8 +176,8 @@ body{
       <img src="imgs/shayantan.jpg" style="margin-left:5px; width:300px ;height:350px;" alt="shayantan" style="width:50%">
       <div class="container">
         <h2>Mr. Shayantan Santra</h2>
-        <h4 class="title" style="color:white;">Begineer</h4>                                       
-        <p>He gave ideas for this website and helped in different areas</p>
+        <h4 class="title" style="color:white;">Website developer</h4>                                       
+        <p>He gave ideas and worked on front end</p>
         <h3 class="mail">Mail ID: shayantan.santra@gmail.com</h3>                                                                 
                 <a href="https://www.facebook.com/shayantan.santra?ref=br_rs" class="fa fa-facebook"></a>
                 <a href="https://www.youtube.com/channel/UC6QJjXIGwOug_zDRdygHuXg/featured" class="fa fa-youtube"></a>
