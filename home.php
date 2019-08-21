@@ -23,7 +23,7 @@
 body{
   background-size:cover;
   background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(red, yellow); 
+  background-image:url('imgs/wall1.jpg');
   font-family:new time roman;
 }
 footer {

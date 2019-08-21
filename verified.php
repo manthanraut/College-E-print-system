@@ -50,7 +50,7 @@ body{
     padding:0;
     background-color:#e6e6e6;
     font-family:new time roman;
-    opacity:.7;
+  
 }
 
 .container{
@@ -111,7 +111,6 @@ h3{
     text-align: center;
     font-size: 18px;
     margin: 4px 2px;
-    opacity: 0.8;
     transition: 0.3s;
   }
   
