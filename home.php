@@ -19,11 +19,10 @@
         Home Page
     </title>
 <style>
-
+ 
 body{
   background-size:cover;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image:url('imgs/wall1.jpg');
+  background-color: cyan; /* For browsers that do not support gradients */
   font-family:new time roman;
 }
 footer {
@@ -71,7 +70,9 @@ li a:hover:not(.active) {
   <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
 </ul>
-          
+<video playsinline autoplay muted loop id="myVideo">
+          <source src="imgs/tech.mp4" type="video/mp4">
+          </video>    
           <footer class="footer-distributed" style="opacity:.6;">
 
             <div class="footer-right">
