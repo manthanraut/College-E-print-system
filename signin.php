@@ -7,6 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Add icon library -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
 	function myFunction() {
@@ -64,7 +65,7 @@ h2
 	width:100%;
 	margin-bottom: 20px; 
 }
-.loginBox input[type="password"]
+.loginBox input[type="password"],input[type="text"]
 {
 	border: none;
 	border-bottom: 1px solid black;
@@ -73,8 +74,6 @@ h2
 	height:40px;
 	color:black;
 	font-size: 16px;
-	
-	
 }
 
 .chk{
@@ -160,7 +159,10 @@ li a:hover:not(.active) {
   font-size:25px;
 
 }
-
+input.chkbox { 
+			width: 20px; 
+			height: 20px; 
+		}
 #ps :hover{
 
 	text-decoration:underline;
@@ -179,15 +181,15 @@ li a:hover:not(.active) {
 		<img src="imgs/user.png" class="user">
 		<h2 style="font-family:cursive;">Log In Here</h2>
 		<form name="myform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
-		
+			<i class="fa fa-user icon"></i>	
 			<input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
-		
+			<i class="fa fa-key icon"></i>
 			<input type="password" name = "passwd" id='psw' placeholder="Enter Password" required>
 			<!--<p>Check password</p>-->
 			<table>
 				<tr>
 				   <td><div> <p style="margin-bottom:20px;font-size:18px;color:black;">Check password</p> </div></td>
-				   <td><div> <input type="checkbox" style="margin-left:10px;" onclick="myFunction()"></div></td>
+				   <td><div> <input type="checkbox" style="margin-left:10px;" class='chkbox' onclick="myFunction()"></div></td>
 				</tr>
 			 </table>
 

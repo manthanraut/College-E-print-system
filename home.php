@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="footer, contact, form, icons" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="keywords" content="footer, contact, form, icons" />
   <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/footer-distributed.css">
-
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <title>
-        Home Page
-    </title>
 <style>
- 
-body{
-  background-size:cover;
-  background-color: cyan; /* For browsers that do not support gradients */
-  font-family:new time roman;
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("wall1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  height:120px;
+  height:140px;
+  padding:20px;
 }
 ul {
   list-style-type: none;
@@ -60,6 +67,7 @@ li a:hover:not(.active) {
   font-size:25px;
 
 }
+
 </style>
 </head>
 <body>
@@ -70,10 +78,8 @@ li a:hover:not(.active) {
   <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
 </ul>
-<video playsinline autoplay muted loop id="myVideo">
-          <source src="imgs/tech.mp4" type="video/mp4">
-          </video>    
-          <footer class="footer-distributed" style="opacity:.6;">
+<div class="bg"></div>
+<footer class="footer-distributed" style="opacity:.6;">
 
             <div class="footer-right">
               <a href="https://www.linkedin.com/in/akilesh-salunkhe-570b45148/" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -91,15 +97,12 @@ li a:hover:not(.active) {
                 <a href="http://localhost/College-E-print-system/signin.php">  Sign In</a>
                 ~
                 <a href="http://localhost/College-E-print-system/verified.php">  Sign Up</a>
-                ~
-                <a href="http://localhost/College-E-print-system/contact.php">  Contact</a>
+               
               </p>
       
               <p>Company Name : SAM &copy; 2019</p>
             </div>
       
           </footer>
-      
-         
 </body>
 </html>

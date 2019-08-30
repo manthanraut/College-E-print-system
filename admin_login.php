@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/loginadmin.css">
 		<!--<link rel="stylesheet" href="css/loginadmin.css" type="text/css" >-->
-	
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
             <meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Add icon library -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@
 	width:100%;
 	margin-bottom: 20px; 
 }
-.loginBox input[type="text"], .loginBox input[type="password"]
+.loginBox input[type="text"], .loginBox input[type="password"], .loginBox input[type="text"]
 {
 	border: none;
 	border-bottom: 2px solid black;
@@ -76,10 +76,11 @@ li a:hover:not(.active) {
 .loginBox
 {
 	position:absolute;
-	left:37%;
-	top:20%;
+	top:55%;
+	left:50%;
+	transform: translate(-50%, -50%);
 	width:350px;
-	height:420px;
+	height:450px;
 	padding:80px 40px;
 	box-sizing: border-box;
 	background-color:white;
@@ -94,7 +95,21 @@ li a:hover:not(.active) {
 
 text-decoration:underline;
 }
+input.chkbox { 
+			width: 20px; 
+			height: 20px; 
+		}
 	</style>
+	<script type="text/javascript">
+	function myFunction() {
+  var x = document.getElementById("psw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+	</script>
 	<body>
 	<ul>
   <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
@@ -106,8 +121,18 @@ text-decoration:underline;
 		<img src="imgs/admin.jpg" class="user">
 		<h2 style="font-family:cursive;color:red">Admin LogIn</h2>
 		<form autocomplete="off">
-			<input type="text" name = "" placeholder="Enter Username">
-			<input type="password" name = "" placeholder="Enter Password">
+
+		<i class="fa fa-user icon"></i>	
+		<input type="text" name = "admin" placeholder="Enter Username">
+		<i class="fa fa-key icon"></i>
+			<input type="password" name = "adminpsw" placeholder="Enter Password" id="psw">
+			<table>
+				<tr>
+				   <td><div> <p style="margin-bottom:20px;font-size:18px;color:black;">Check password</p> </div></td>
+				   <td><div> <input type="checkbox" style="margin-left:10px;" class='chkbox' onclick="myFunction()"></div></td>
+				</tr>
+			 </table>
+
 			<input type="submit" name = "" style="font-family:courier header;" value="Sign In As Admin">
 			<a href="#" id="ps1"><p style="font-size:20px;font-family:new times roman;color:black;">Forget Password</p></a> 
 			
