@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,28 +10,16 @@
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/footer-distributed.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script type="text/javascript">
-  var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-  </script>
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-.mySlides 
-{display:none;}
+.mySlides {display:none;
+width:100%;
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -89,6 +76,7 @@ li a:hover:not(.active) {
 
 </style>
 </head>
+
 <body>
 <ul>
   <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
@@ -97,12 +85,13 @@ li a:hover:not(.active) {
   <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
 </ul>
-<div class="w3-content w3-section" style="max-width:500px">
-  <img class="mySlides" src="imgs/dyp1.jpg" style="width:100%">
-  <img class="mySlides" src="imgs/dyp2.jpg" style="width:100%">
-  <img class="mySlides" src="imgs/dyp3.jpg" style="width:100%">
-  <img class="mySlides" src="imgs/dyp4.jpg" style="width:100%">
-  <img class="mySlides" src="imgs/dyp5.jpg" style="width:100%">
+
+<div class="w3-content w3-section" style="width:100%;height: 100%;">
+
+  <img class="mySlides" src="imgs/dyp1.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">
+  <img class="mySlides" src="imgs/dyp3.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">
+  <img class="mySlides" src="imgs/dyp4.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">
+  <img class="mySlides" src="imgs/dyp5.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">
 </div>
 <footer class="footer-distributed" style="opacity:.6;">
 
@@ -129,6 +118,22 @@ li a:hover:not(.active) {
             </div>
       
           </footer>
-
 </body>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+
 </html>
