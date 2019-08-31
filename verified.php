@@ -53,17 +53,19 @@ body{
   
 }
 
+
 .container{
-    width: 500px;
-  height: 250px;
-  padding: 40px 40px;
-  border-radius: 10px;
-  position: absolute;
-  left: 20%;
-  top:50%;
-  color:black;
-  background:white;
-  transform: translate(-50%,-50%);
+  box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+  position:absolute;
+	top:55%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:350px;
+	height:450px;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background-color:white;
+ 
 }
 h1{
     font-size:40px;
@@ -97,8 +99,8 @@ h3{
     margin: 4px 2px;
     opacity: 0.6;
     margin-top:20px;
-    margin-left:145px;
     transition: 0.3s;
+    width:100%;
   }
   
   #btn1:hover {opacity: 1}
@@ -112,6 +114,7 @@ h3{
     font-size: 18px;
     margin: 4px 2px;
     transition: 0.3s;
+    width:100%;
   }
   
   #btn2:hover {opacity: 1}
@@ -150,18 +153,19 @@ small{
                
                 <div class="row">
                     <div>
-                        <h3 class="text-left" style="text-align:center;">USER verification</h3>
+                        <h3 class="text-left" style="text-align:center;background: -webkit-linear-gradient(white,red,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">USER verification</h3>
                     </div>
-                   
+            
                     <hr>
+                    <br><br>
                 <div class="row">
-                        <label class="label control-label" style="color:black;">Roll No.: </label>
-                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="margin-left:43px;" placeholder="Roll No." required>
+                        
+                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="width:100%;" placeholder="Enter Roll No." required>
                 </div>
-    
+    <br><br>
                 <div class="row">
-                    <label class="label control-label" style="color:black;">Rait Mail ID: </label>
-                        <input type="Email" class="form-control" name="raitmail" style="margin-left:10px;" id='raitmailid' placeholder="Rait mail id" required>
+                   
+                        <input type="Email" class="form-control" name="raitmail" style="width:100%;" id='raitmailid' placeholder="Enter Rait mail id" required>
             </div>
                 <button type="submit" value="Submit" id="btn1">Submit</button>
                 <button type="reset" value="Reset" id="btn2">Reset</button>

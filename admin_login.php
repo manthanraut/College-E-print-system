@@ -14,13 +14,12 @@
 
 	</head>
 	<style>
-		loginBox p
+loginBox p
 {
 	padding:0;
 	margin:0;
 	font-weight:bold;
 	color:black;
-	
 } 
 .loginBox input
 {
@@ -75,6 +74,8 @@ li a:hover:not(.active) {
 }
 .loginBox
 {
+	border-radius:20px;
+	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
 	position:absolute;
 	top:55%;
 	left:50%;
@@ -119,7 +120,7 @@ input.chkbox {
 	<div class="loginBox">
 		
 		<img src="imgs/admin.jpg" class="user">
-		<h2 style="font-family:cursive;color:red">Admin LogIn</h2>
+		<h2 style="font-family:cursive;font-size:25px;background: -webkit-linear-gradient(lightgreen,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Admin LogIn</h2>
 		<form autocomplete="off">
 
 		<i class="fa fa-user icon"></i>	
@@ -133,7 +134,7 @@ input.chkbox {
 				</tr>
 			 </table>
 
-			<input type="submit" name = "" style="font-family:courier header;" value="Sign In As Admin">
+			<input type="submit" name = "submitadmin" style="font-family:courier header;" value="Sign In As Admin">
 			<a href="#" id="ps1"><p style="font-size:20px;font-family:new times roman;color:black;">Forget Password</p></a> 
 			
 		</form>

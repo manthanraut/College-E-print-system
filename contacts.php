@@ -40,11 +40,12 @@ body{
   }
 }
 .card {
-  box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.2);
-  max-width: 280px;
+  box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+  max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
+  background-color:rgba(0,0,0,0.1);
 }
 
 
@@ -115,6 +116,9 @@ button:hover{
 a:hover {
   opacity:1;
 }
+p,h4,h1{
+  font-family:new time roman;
+}
 </style>
 </head>
 <body>
@@ -131,13 +135,12 @@ a:hover {
   <img src="imgs/akilesh.jpg" alt="Akilesh" style="width:100%;">
   <h1>Akilesh Salunkhe</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
+  <h4 style="color:red;">Mail ID:<br>akileshsalunkhe99@gmail.com</h4>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <a href="#"><i class="fa fa-github"></i> </a>
+    <a href="#"><i class="fa fa-linkedin"></i> </a>  
+    <a href="#"><i class="fa fa-facebook"></i> </a> 
   </div>
-  <p><button>Contact</button></p>
 </div>
     </div>
 
@@ -146,13 +149,12 @@ a:hover {
   <img src="imgs/hello.jpg" alt="Manthan" style="width:100%;height:65%;">
   <h1>Manthan Raut</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
+  <h4 style="color:red;">Mail ID:<br>manthanraut16@gmail.com</h4>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <a href="https://github.com/manthanraut"><i class="fa fa-github"></i> </a>   
+    <a href="#"><i class="fa fa-linkedin"></i> </a>  
+    <a href="#"><i class="fa fa-facebook"></i> </a> 
   </div>
-  <p><button>Contact</button></p>
 </div>
   </div>
   <div class="column">
@@ -160,13 +162,12 @@ a:hover {
   <img src="imgs/shayantan.jpg" alt="Shayantan" style="width:100%;">
   <h1>Shyantan Santra</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
+  <h4 style="color:red;">Mail ID: shayantan.santra@gmail.com</h4>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <a href="#"><i class="fa fa-github"></i>  </a> 
+    <a href="#"><i class="fa fa-linkedin"></i>  </a>  
+    <a href="#"><i class="fa fa-facebook"></i>  </a> 
   </div>
-  <p style="margin-top:15px;"><button>Contact</button></p>
 </div>
   </div>
 </div>

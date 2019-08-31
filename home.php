@@ -13,7 +13,26 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript">
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+  </script>
 <style>
+.mySlides 
+{display:none;}
 body, html {
   height: 100%;
   margin: 0;
@@ -78,7 +97,13 @@ li a:hover:not(.active) {
   <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
 </ul>
-<div class="bg"></div>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="imgs/dyp1.jpg" style="width:100%">
+  <img class="mySlides" src="imgs/dyp2.jpg" style="width:100%">
+  <img class="mySlides" src="imgs/dyp3.jpg" style="width:100%">
+  <img class="mySlides" src="imgs/dyp4.jpg" style="width:100%">
+  <img class="mySlides" src="imgs/dyp5.jpg" style="width:100%">
+</div>
 <footer class="footer-distributed" style="opacity:.6;">
 
             <div class="footer-right">
@@ -104,5 +129,6 @@ li a:hover:not(.active) {
             </div>
       
           </footer>
+
 </body>
 </html>

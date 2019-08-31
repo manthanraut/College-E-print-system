@@ -8,10 +8,10 @@
     color: black;
     position: fixed;
     padding: 20px;
-    margin-top: 350px;
+    margin-top: 320px;
     width:400px;
     height:250px;
-    margin-left:500px;
+    margin-left:860px;
     border-radius:40px;
     opacity:.6;
   }
@@ -54,18 +54,7 @@
   font-family: montserrat;
   box-sizing: border-box;
 }
-.container{
-    width: 400px;
-  height: 420px;
-  padding: 40px 40px;
-  border-radius: 10px;
-  position: absolute;
-  left: 20%;
-  color:black;
-  background:white;
-  top:30%;
-  opacity:.8;
-  }
+
 h1{
     font-size:40px;
     color:white;
@@ -80,25 +69,14 @@ h3{
     color:white;
 }
 
-.label{
-    font-weight:normal;
-    margin-top:15px;
-    padding-left:10px;
-    color:black;
-    font-sizE:19px;
-}
 #btn1 {
     background-color: #19cae9;
     border: none;
     color: white;
     border-radius:15px;
-    padding: 16px 32px;
     text-align: center;
     font-size: 18px;
-    margin: 4px 2px;
     opacity: 0.6;
-    margin-top:20px;
-    margin-left:145px;
     transition: 0.3s;
   }
   
@@ -108,10 +86,8 @@ h3{
     border: none;
     color: white;
     border-radius:15px;
-    padding: 16px 32px;
     text-align: center;
     font-size: 18px;
-    margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
   }
@@ -125,6 +101,11 @@ h3{
     font-size:18px;
     height:30px;
     color:black;
+}
+@media only screen and (max-width: 360px) {
+  .container{
+    background-color: lightblue;
+  }
 }
 input[type="checkbox"]{
     margin-top:15px;
@@ -170,23 +151,9 @@ li a:hover:not(.active) {
             <!-- Add icon library -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
     <script>
-      	function show1() {
-  var x = document.getElementById("psw");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-function show(obj) {
-  var obj = document.getElementById('psw1');
-  obj.type = "text";
-}
-function hide(obj) {
-  var obj = document.getElementById('psw1');
-  obj.type = "password";
-}
+ 
             function validate(form) {
                // var myInput = document.getElementById("psw");
                password1=form.psw1.value;
@@ -215,52 +182,55 @@ function hide(obj) {
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
 </ul>
         <form action="http://localhost/College-E-print-system/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
-        <div class="container" style="height:500px;">
+        <div class="container" style="position:absolute;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);transform: translate(-50%, -50%);width:350px;	top:55%;left:50%;height:550px;padding:20px 20px;box-sizing: border-box;background-color:white;">
             <div class="row">
               
                     <div>
-                        <h3 class="text-left" style="text-align:center;color:black;">Registration Form</h3>
+                        <h3 class="text-left" style="text-align:center;background: -webkit-linear-gradient(yellow,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Registration Form</h3>
                     </div>
                   
                     <hr>
                     <div class="row">
-                            <label class="label control-label" style="color:black;">Full Name </label>
-                                <input type="text" class="form-control" name="fullname" id='fname' placeholder="fullname" style="border-bottom: 2px solid black;margin-left:30px;color:black;" required>
+                           
+                                <input type="text" class="form-control" name="fullname" id='fname' placeholder="Enter fullname" style="border-bottom: 2px solid black;width:100%;color:black;" required>
                     </div>
                 <div class="row">
-                        <label class="label control-label" style="color:black;">Roll No.: </label>
-                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="border-bottom: 2px solid black;color:black;margin-left:43px;" placeholder="Roll No." required>
+                       
+                            <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="border-bottom: 2px solid black;color:black;width:100%;" placeholder="Enter Roll No." required>
                 </div>
                 <div class="row">
-                        <label class="label control-label" style="margin-top:10px;color:black;">Gender: </label>
-                        <div class="col-md-10" style="margin-left:120px;margin-top:0px;">
-                            <input type="radio" id="rd1" name="gender" value="male" style="margin-left:30px;"><small style="color:black;"> Male</small>
-                            <input type="radio" id="rd2" name="gender" value="female" style="margin-left:20px;"><small style="color:black;"> Female</small>
-                        </div>
+                <br>
+                        <label class="label control-label" style="color:black;margin-right:20px;">Gender: </label>
+                    
+                            <input type="radio" id="rd1" name="gender" value="male" ><small style="color:black;"> Male</small>
+                            <input type="radio" id="rd2" name="gender" value="female"><small style="color:black;"> Female</small>
+                  
                 </div>
                 <div class="row">
-                    <label class="label  control-label" style="color:black;">Rait Mail ID: </label>
-                        <input type="Email" class="form-control" name="raitmail" style="color:black;margin-left:10px;border-bottom: 2px solid black;" id='raitmailid' placeholder="Rait mail id" required>
+                   
+                        <input type="Email" class="form-control" name="raitmail" style="color:black;width:100%;border-bottom: 2px solid black;" id='raitmailid' placeholder="Enter Rait mail id" required>
             </div>
                 <div class="row">
-                        <label class="label control-label" style="color:black;">E-mail: </label>
-                            <input type="Email" class="form-control" name="Email" style="color:black;margin-left:55px;border-bottom: 2px solid black;" id='mailid' placeholder="Email" required>
+                       
+                            <input type="Email" class="form-control" name="Email" style="color:black;width:100%;border-bottom: 2px solid black;" id='mailid' placeholder="Enter Email" required>
                 </div>
                 <div class="row">
-                        <label class="label  control-label" style="color:black;">Mobile No.: </label>
-                            <input type="tel" class="form-control" name="num" style="color:black;margin-left:15px;border-bottom: 2px solid black;" id='mob' placeholder="Mobile No." maxlength=10 required>
+                        
+                            <input type="tel" class="form-control" name="num" style="color:black;width:100%;border-bottom: 2px solid black;" id='mob' placeholder="Enter Mobile No." maxlength=10 required>
                 </div>
                 <div class="row">
-                    <label class="label control-label" style="color:black;">Password: </label>
-                        <input type="password" class="form-control" id="psw1" name="psw1" style="margin-left:30px;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="password" maxlength=20 required>
-                        <img src="imgs/icon.png" style="border-radius:10px;margin-left:10px;width:30px;height:30px;" onmouseover="show();" onmouseout="hide();" />
+                    
+                        <input type="password" class="form-control" id="psw1" name="psw1" style="width:100%;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password" maxlength=20 required>
+                        
+                      
                       </div>
+                  
             <div class="row"9>
-                <label class="label control-label" style="color:black;">Confirm </label><br><label class="label  control-label" style="margin-top:0px;color:black">Password: </label>
-                    <input type="password" class="form-control" id="psw2" name="psw2" style="margin-left:25px;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="confirm password" maxlength=20 required>
+            
+                    <input type="password" class="form-control" id="psw2" name="psw2" style="width:100%;color:black;border-bottom: 2px solid black;" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Confirm password" maxlength=20 required>
         </div>
-                <button type="submit" value="Submit" name="reg_user" id="btn1">Submit</button>
-                <button type="reset" value="Reset" id="btn2">Reset</button>
+                <button type="submit" value="Submit" name="reg_user" id="btn1" style="width:100%;margin-left:0px;">Submit</button>
+                <button type="reset" value="Reset" id="btn2" style="width:100%;">Reset</button>
             </div>
         </div>
   

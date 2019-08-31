@@ -107,6 +107,7 @@ h2
 } 
 .loginBox
 {
+	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
 	position:absolute;
 	top:55%;
 	left:50%;
@@ -116,6 +117,7 @@ h2
 	padding:80px 40px;
 	box-sizing: border-box;
 	background-color:white;
+	border-radius:20px;
 	
 }
 .loginBox input[type="email"]
@@ -179,7 +181,7 @@ input.chkbox {
 	<div class="loginBox">
 		
 		<img src="imgs/user.png" class="user">
-		<h2 style="font-family:cursive;">Log In Here</h2>
+		<h2 style="font-family:cursive;font-size:30px;background: -webkit-linear-gradient(white,blue);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Log In Here</h2>
 		<form name="myform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
 			<i class="fa fa-user icon"></i>	
 			<input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
@@ -194,7 +196,7 @@ input.chkbox {
 			 </table>
 
 			<input type="submit" name = "login_user" style="font-family:courier header;" value="Log In As User">
-			<a href="#" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;">Forget Password</p></a> 
+			<a href="#" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;background: -webkit-linear-gradient(black,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
 			
 		</form>
 	</div>
