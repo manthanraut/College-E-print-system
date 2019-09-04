@@ -135,7 +135,7 @@ input.chkbox {
 			 </table>
 
 			<input type="submit" name = "submitadmin" style="font-family:courier header;" value="Sign In As Admin">
-			<a href="#" id="ps1"><p style="font-size:20px;font-family:new times roman;color:black;">Forget Password</p></a> 
+			<a href="#" id="ps1"><p style="font-size:20px;font-family:new times roman;color:black;background: -webkit-linear-gradient(blue,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
 			
 		</form>
 	</div>

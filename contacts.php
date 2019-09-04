@@ -146,7 +146,7 @@ p,h4,h1{
 
   <div class="column">
     <div class="card" style="height:600px;width:380px;">
-  <img src="imgs/hello.jpg" alt="Manthan" style="width:100%;height:65%;">
+  <img src="imgs/manthan.jpg" alt="Manthan" style="width:100%;height:65%;">
   <h1>Manthan Raut</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
   <h4 style="color:red;">Mail ID:<br>manthanraut16@gmail.com</h4>
