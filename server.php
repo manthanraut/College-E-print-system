@@ -56,7 +56,8 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 	if (isset($_POST['login_user'])) {
 	    $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['passwd']);
-    $query = "SELECT * FROM student_info WHERE email='$email' AND password='$password'";
+	$query = "SELECT * FROM student_info WHERE email='$email' AND password='$password'";
+	$rollno="SELECT roll_no FROM student_info WHERE email='$email' AND password='$password'";
     $results = mysqli_query($db, $query);
 	$getrollno="select full_name from student_info where email='$email'";
 	$result=mysqli_query($db,$getrollno);
@@ -65,6 +66,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 		$_SESSION['fullname']=$row["full_name"];
 	  #$_SESSION['fullname']=$fullname;
 	  $_SESSION['email']=$email;
+	  $_SESSION['rollno']=$rollno;
       $_SESSION['success'] = "You are now logged in";
         header( 'Location: http://localhost/College-E-print-system/userpage.php' );
     }

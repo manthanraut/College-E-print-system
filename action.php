@@ -1,4 +1,6 @@
 <?php
+
+include 'server.php';
 function format_folder_size($size)
 {
  if ($size >= 1073741824)
@@ -52,7 +54,7 @@ if(isset($_POST["action"]))
  if($_POST["action"] == "fetch")
  {
   $folder = array_filter(glob('*'), 'is_dir');
-  
+  $roll_no=$rollno;
   $output = '
   <table class="table table-bordered table-striped">
    <tr>
@@ -69,6 +71,7 @@ if(isset($_POST["action"]))
   {
    foreach($folder as $name)
    {
+       if ($name!='imgs' && $name!='css'){
     $output .= '
      <tr>
       <td>'.$name.'</td>
@@ -80,6 +83,7 @@ if(isset($_POST["action"]))
       <td><button type="button" name="view_files" data-name="'.$name.'" class="view_files btn btn-default btn-xs">View Files</button></td>
      </tr>';
    }
+}
   }
   else
   {
