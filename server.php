@@ -74,5 +74,16 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
         header('Location: http://localhost/College-E-print-system/signin.php');
         }
 }
+$flag=0;
 
+if (isset($_POST['submitadmin'])) {
+	$username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['adminpsw']);
+	if ($username=='admin' && $password=='Admin123'){
+		header( 'Location: http://localhost/abc.html' );
+	}
+	else{
+		header( 'Location: http://localhost/College-E-print-system/admin_login.php' );
+	}
+}
 ?>

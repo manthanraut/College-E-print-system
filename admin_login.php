@@ -121,10 +121,10 @@ input.chkbox {
 		
 		<img src="imgs/admin.jpg" class="user">
 		<h2 style="font-family:cursive;font-size:25px;background: -webkit-linear-gradient(lightgreen,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Admin LogIn</h2>
-		<form autocomplete="off">
+		<form autocomplete="off" method="POST" action="http://localhost/College-E-print-system/server.php">
 
 		<i class="fa fa-user icon"></i>	
-		<input type="text" name = "admin" placeholder="Enter Username">
+		<input type="text" name = "username" placeholder="Enter Username">
 		<i class="fa fa-key icon"></i>
 			<input type="password" name = "adminpsw" placeholder="Enter Password" id="psw">
 			<table>
