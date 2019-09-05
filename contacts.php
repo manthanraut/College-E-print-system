@@ -120,13 +120,28 @@ p,h4,h1{
   font-family:new time roman;
 }
 </style>
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = String(x).slice(0,25);
+document.getElementById('ct').style.fontSize='20px';
+document.getElementById('ct').style.color='white';
+display_c();
+ }
+</script>
 </head>
-<body>
+<body onload=display_ct();>
 <ul>
   <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
   <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></li>
   <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
   <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
+  <span id='ct' style="float:right;background-color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);color:white;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
   
 <div class="row">

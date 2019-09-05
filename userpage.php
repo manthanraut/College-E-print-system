@@ -119,18 +119,35 @@ a:hover, a:active {
 
 
     </style>
+    <script type="text/javascript">
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+document.getElementById('ct').innerHTML = String(x).slice(0,25);
+document.getElementById('ct').style.fontSize='20px';
+document.getElementById('ct').style.color='white';
+display_c();
+ }
+</script>
 	<title><?php echo 'Hello '.$_SESSION['fullname']; ?></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body  onload=display_ct();>
 
 <div class="header">
 	<h2 align="left">Home Page</h2>
+  <span id='ct' style="float:left;background-color:black;color:white;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
+
 	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
     	<p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'" class="fa fa-close"> LogOut</a> </p>
-	</div>
+
+  </div>
 
 <br /><br />
   <div class="container">
