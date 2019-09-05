@@ -3,7 +3,6 @@
 <html>
 	<head>
 		<title>User Login</title>
-		<link rel="stylesheet" type="text/css"  href="css/loginuser.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Add icon library -->
@@ -169,6 +168,18 @@ input.chkbox {
 
 	text-decoration:underline;
 }
+
+.user
+{
+	width:100px;
+	height:100px; 
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+	border-radius:50%;
+}
+ 
 </style>
 <script type="text/javascript">
 function display_c(){
@@ -212,7 +223,7 @@ display_c();
 			 </table>
 
 			<input type="submit" name = "login_user" style="font-family:courier header;" value="Log In As User">
-			<a href="#" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;background: -webkit-linear-gradient(black,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
+			<a href="http://localhost/College-E-print-system/step1.php" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;background: -webkit-linear-gradient(black,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
 			
 		</form>
 	</div>
