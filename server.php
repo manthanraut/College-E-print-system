@@ -87,11 +87,12 @@ if (isset($_POST['resetpsw'])) {
 	$que1="SELECT full_name,password FROM student_info WHERE email='$email'";
 	$solution = mysqli_query($db, $que1);
 	$row = mysqli_fetch_assoc($solution);
+	$url="http://localhost/College-E-print-system/verified.php";
 	$_SESSION['fullname']=$row["full_name"];
 	$_SESSION['password']=$row["password"];
 	try{
 		#Server settings
-		$mail->SMTPDebug = 2;                                       # Enable verbose debug output
+	                   # Enable verbose debug output
 		$mail->isSMTP();                                            # Set mailer to use SMTP
 		$mail->Host       = 'smtp.gmail.com';  # Specify main and backup SMTP servers
 		$mail->SMTPAuth   = true;                                   # Enable SMTP authentication
@@ -103,16 +104,22 @@ if (isset($_POST['resetpsw'])) {
 		#Recipients
 		$mail->setFrom('manthanraut16@gmail.com', 'Manthan');
 		$mail->addAddress($email, $_SESSION['fullname']);     # Add a recipient
-	   
+	   if($_SESSION['fullname']=="" || $_SESSION['password']==""){
 	
 		# Content
 		$mail->isHTML(true);                                  # Set email format to HTML
 		$mail->Subject = 'College E-print system Password manager';
+		$mail->Body    = '<h2>Sorry ! but you have not registered yet</h2><br><a href="' . $url . '">' . $url . '</a>';
+		
+	   }else{
+		$mail->isHTML(true);                                  # Set email format to HTML
+		$mail->Subject = 'College E-print system Password manager';
 		$mail->Body    = '<b>Dear ' . $_SESSION['fullname'] . '</b><br><p>We received a password forgot request from you.Your password is</p><br><h3>'.$_SESSION['password'].'</h3>';
-		$mail->AltBody = 'Password forgot request';
+	   }
+	   $mail->AltBody = 'Password forgot request';
 	
 		$mail->send();
-		header( 'Location: http://localhost/College-E-print-system/signin.php' );
+		header('Location: http://localhost/College-E-print-system/signin.php');
 } catch (Exception $e) {
     header( 'Location: http://localhost/College-E-print-system/test1.php' );
 }}
