@@ -174,12 +174,13 @@ input.chkbox {
 		
 		<img src="imgs/icon.png" class="user">
 		<h2 style="color:black;font-size:30px;">Forgot Password</h2>
-        <p style="color:black;font-size:13px">No Problem! Enter your email or username below and we will send you an email with instruction to reset your password.</p>
+        <p style="color:black;font-size:13px">No Problem! Enter your email address below and we will send your password on your Email account</p>
 		<form name="resetform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
             <input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
 			<input type="submit" name="resetpsw"> 
 		</form>
         <p style="color:black;margin-left:75px;font-size:18px;">Back to <a href="http://localhost/College-E-print-system/signin.php" style="color:blue;font-size:18px;">Login</a></p>
+	<h2>Check your Email</h2>
 	</div>
 	</body>
 </html>

@@ -1,6 +1,15 @@
 <?php 
 	session_start();
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
+// Load Composer's autoloader
+require 'vendor/autoload.php';
+
+// Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
 	// variable declaration
 	$fullname = "";
 $rollno = "";
@@ -86,12 +95,12 @@ if (isset($_POST['submitadmin'])) {
 		header( 'Location: http://localhost/College-E-print-system/admin_login.php' );
 	}
 }
-/*if (isset($_POST['resetpsw'])) {
+if (isset($_POST['resetpsw'])) {
 	$email = mysqli_real_escape_string($db, $_POST['email']);
 	$to = $email;
 $subject = "Password reset instructions";
 $txt = "As you have requested for reset password instructions, here they are, please follow the URL: http://localhost/College-E-print-system/step2.php";
 mail($to,$subject,$txt);
 echo '<script type="text/javascript">alert("An email has been sent to your register email id with further instructions how to reset your password. Please check your email")</script>';
-}*/
+}
 ?>
