@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require 'vendor/autoload.php';
+require 'C:\xampp\htdocs\vendor/autoload.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -38,19 +38,6 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
     $email=mysqli_real_escape_string($db,$_POST['Email']);
     $mobno=mysqli_real_escape_string($db,$_POST['num']);
     $password = mysqli_real_escape_string($db, $_POST['psw1']);
-
-		// form validation: ensure that the form is correctly filled
-		//if (empty($username)) { array_push($errors, "Username is required"); }
-		//if (empty($email)) { array_push($errors, "Email is required"); }
-		//if (empty($password)) { array_push($errors, "Password is required"); }
-
-		//if ($password_1 != $password_2) {
-		//	array_push($errors, "The two passwords do not match");
-		//}
-
-		// register user if there are no errors in the form
-		//if (count($errors) == 0) {
-			//$password = md5($password_1);//encrypt the password before saving in the database
 			$query = "INSERT INTO student_info (full_name,roll_no,gender,rait_id,email,mob_no,password) VALUES('$fullname', '$rollno', '$gender','$raitmail','$email','$mobno','$password')";
 			mysqli_query($db, $query);
 
@@ -97,10 +84,35 @@ if (isset($_POST['submitadmin'])) {
 }
 if (isset($_POST['resetpsw'])) {
 	$email = mysqli_real_escape_string($db, $_POST['email']);
-	$to = $email;
-$subject = "Password reset instructions";
-$txt = "As you have requested for reset password instructions, here they are, please follow the URL: http://localhost/College-E-print-system/step2.php";
-mail($to,$subject,$txt);
-echo '<script type="text/javascript">alert("An email has been sent to your register email id with further instructions how to reset your password. Please check your email")</script>';
-}
-?>
+	$que1="SELECT full_name,password FROM student_info WHERE email='$email'";
+	$solution = mysqli_query($db, $que1);
+	$row = mysqli_fetch_assoc($solution);
+	$_SESSION['fullname']=$row["full_name"];
+	$_SESSION['password']=$row["password"];
+	try{
+		#Server settings
+		$mail->SMTPDebug = 2;                                       # Enable verbose debug output
+		$mail->isSMTP();                                            # Set mailer to use SMTP
+		$mail->Host       = 'smtp.gmail.com';  # Specify main and backup SMTP servers
+		$mail->SMTPAuth   = true;                                   # Enable SMTP authentication
+		$mail->Username   = 'manthanraut16@gmail.com';                     # SMTP username
+		$mail->Password   = 'piyushraut123';                               # SMTP password
+		$mail->SMTPSecure = 'tls';                                  # Enable TLS encryption, `ssl` also accepted
+		$mail->Port       = 587;                                    # TCP port to connect to
+	
+		#Recipients
+		$mail->setFrom('manthanraut16@gmail.com', 'Manthan');
+		$mail->addAddress($email, $_SESSION['fullname']);     # Add a recipient
+	   
+	
+		# Content
+		$mail->isHTML(true);                                  # Set email format to HTML
+		$mail->Subject = 'College E-print system Password manager';
+		$mail->Body    = '<b>Dear ' . $_SESSION['fullname'] . '</b><br><p>We received a password forgot request from you.Your password is</p><br><h3>'.$_SESSION['password'].'</h3>';
+		$mail->AltBody = 'Password forgot request';
+	
+		$mail->send();
+		header( 'Location: http://localhost/College-E-print-system/signin.php' );
+} catch (Exception $e) {
+    header( 'Location: http://localhost/College-E-print-system/test1.php' );
+}}

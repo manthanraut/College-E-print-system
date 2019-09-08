@@ -162,6 +162,18 @@ input.chkbox {
 }
 
 </style>
+<script>
+function validateemail(form){
+	var Email=document.getElementById('email');
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+if(reg.test(Email.value)){
+	alert("Check your email for your password!");
+	return true;
+}
+	else{
+		return false;
+	} 	}
+</script>
 	</head>
 	<body>
 	<ul>
@@ -175,12 +187,11 @@ input.chkbox {
 		<img src="imgs/icon.png" class="user">
 		<h2 style="color:black;font-size:30px;">Forgot Password</h2>
         <p style="color:black;font-size:13px">No Problem! Enter your email address below and we will send your password on your Email account</p>
-		<form name="resetform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
+		<form action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail(this);">
             <input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
 			<input type="submit" name="resetpsw"> 
 		</form>
         <p style="color:black;margin-left:75px;font-size:18px;">Back to <a href="http://localhost/College-E-print-system/signin.php" style="color:blue;font-size:18px;">Login</a></p>
-	<h2>Check your Email</h2>
 	</div>
 	</body>
 </html>
