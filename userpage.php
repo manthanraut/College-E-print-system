@@ -197,7 +197,7 @@ display_c();
     <form method="post" id="upload_form" enctype='multipart/form-data'>
      <p>Select File
      <input type="file" name="upload_file" /></p>
-     <br />
+     <br/>
      <input type="hidden" name="hidden_folder_name" id="hidden_folder_name" />
      <input type="submit" name="upload_button" class="btn btn-info" value="Upload" />
     </form>

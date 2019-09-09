@@ -8,7 +8,7 @@ if($_FILES["upload_file"]["name"] != '')
  if(in_array($extension, $allowed_extension))
  {
   $new_file_name = $filename;
-  $path = $_POST["hidden_folder_name"] .  '/' . $new_file_name;
+  $path = $_POST["hidden_folder_name"] . '/' . $new_file_name;
   if(move_uploaded_file($_FILES["upload_file"]["tmp_name"], $path))
   {
    echo 'File Uploaded';
