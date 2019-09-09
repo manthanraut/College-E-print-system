@@ -195,7 +195,7 @@ display_c();
    </div>
    <div class="modal-body">
     <form method="post" id="upload_form" enctype='multipart/form-data'>
-     <p>Select Image
+     <p>Select File
      <input type="file" name="upload_file" /></p>
      <br />
      <input type="hidden" name="hidden_folder_name" id="hidden_folder_name" />
