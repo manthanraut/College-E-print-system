@@ -76,7 +76,8 @@ if (isset($_POST['submitadmin'])) {
 	$username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['adminpsw']);
 	if ($username=='admin' && $password=='Admin123'){
-		header( 'Location: http://localhost/abc.html' );
+		$_SESSION['email']=$username;
+		header( 'Location: http://localhost/College-E-print-system/admin.php' );
 	}
 	else{
 		header( 'Location: http://localhost/College-E-print-system/admin_login.php' );
@@ -97,7 +98,7 @@ if (isset($_POST['resetpsw'])) {
 		$mail->Host       = 'smtp.gmail.com';  # Specify main and backup SMTP servers
 		$mail->SMTPAuth   = true;                                   # Enable SMTP authentication
 		$mail->Username   = 'manthanraut16@gmail.com';                     # SMTP username
-		$mail->Password   = 'piyushraut123';                               # SMTP password
+		$mail->Password   = '*************';                               # SMTP password
 		$mail->SMTPSecure = 'tls';                                  # Enable TLS encryption, `ssl` also accepted
 		$mail->Port       = 587;                                    # TCP port to connect to
 	
