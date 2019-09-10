@@ -125,8 +125,8 @@ display_c();
  </script>
 	<body onload=display_ct();>
 	<ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);color:white;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
 

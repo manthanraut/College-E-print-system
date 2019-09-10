@@ -76,7 +76,7 @@ if (isset($_POST['submitadmin'])) {
 	$username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['adminpsw']);
 	if ($username=='admin' && $password=='Admin123'){
-		$_SESSION['email']=$username;
+		$_SESSION['username']=$username;
 		header( 'Location: http://localhost/College-E-print-system/admin.php' );
 	}
 	else{

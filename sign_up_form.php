@@ -145,6 +145,16 @@ li a:hover:not(.active) {
   font-size:25px;
 
 }  
+.user
+{
+	width:120px;
+	height:120px; 
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+	border-radius:20%;
+}
             </style>
     <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -189,13 +199,14 @@ display_c();
     </head>
     <body  onload=display_ct();>
     <ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;">Contacts</a></li>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);color:white;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
         <form action="http://localhost/College-E-print-system/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
         <div class="container" style="position:absolute;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);transform: translate(-50%, -50%);width:350px;	top:55%;left:50%;height:550px;padding:20px 20px;box-sizing: border-box;background-color:white;">
+            
             <div class="row">
               
                     <div>

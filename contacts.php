@@ -137,10 +137,10 @@ display_c();
 </head>
 <body onload=display_ct();>
 <ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;">Sign Up</a></li>
-  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;">Sign In</a></li>
-  <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;">Admin</a></li>
+  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
+  <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>
   <span id='ct' style="float:right;background-color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);color:white;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
   

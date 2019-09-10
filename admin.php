@@ -1,7 +1,28 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: http://localhost/College-E-print-system/admin_login.php');
+  }
+  if (isset($_POST['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: http://localhost/College-E-print-system/admin_login.php");
+  }
+?>
 <?php include "conn.php"; ?>
 <html>
+<meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="footer, contact, form, icons" />
+              <!-- Add icon library -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+              <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <head>
-        <title>Admin Page</title>
+        <title><?php echo 'Hello '.$_SESSION['username']; ?></title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -11,7 +32,16 @@
     body, html {
   height: 100%;
 }
-
+input[type=submit] {
+    padding:5px 15px; 
+    background:red;
+    font-family:cortana;
+    font-size:16px; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+}
 .bg {
   /* The image used */
   background-image: url("coffee-cup.jpg");
@@ -24,36 +54,36 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+a:hover{
+  color:red;
+  background-color:white;
+}
     </style>
     </head>
     <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FA1515;" ><!--style="background-color:#ea550e"-->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F30F0F;" ><!--style="background-color:#ea550e"-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a class="navbar-brand" href="http://localhost/College-E-print-system-master/admin.php">
+            
                 <img src="imgs/a_icon.png" width="40" height="40" class="d-inline-block align-top" alt="" >
         
-              </a>
+            
             <!--<a class="navbar-brand" href="#">ADMIN</a>-->
           
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="http://localhost/College-E-print-system-master/admin.php" style="font-size:20px;color:white;margin-bottom:10px;"><h3>Home</h3> <span class="sr-only">(current)</span></a>
-                </li>
-                <!--<li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>-->
+              <a id="logout" href="admin_login.php?logout='1'" style="margin-left:30px;font-size:20px;border:5px solid white ;padding:10px;color:black;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a>
+                </li>
               </ul>
               <form class="form-inline my-lg-1 col-md-4" method="POST" autocomplete="off">
-                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Enter Roll no. to search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:black;background-color:#65FA15;">Search</button>
+                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Enter Roll number" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:black;padding:5px;background-color:#FFF300;"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+               
+                
               </form>
             </div>
           </nav>
@@ -106,7 +136,8 @@
 		$row = mysqli_fetch_assoc($result);
     $fullname=$row["full_name"]; }
     else{
-      $message="User ".$rollno." has not yet registered";
+      echo '<script>alert("User has not registered yet");</script>';
+      $message="";
     }
       ?>
                                 <h4 style="text-transform:uppercase;"><?php echo $rollno;?></h4>
@@ -122,7 +153,7 @@
                         <!-- SIDEBAR BUTTONS -->
                 
 <form  method="post" action="http://localhost/College-E-print-system/deletefolder.php">
-<h5 style="color:red;">Delete folder : <input type="submit" name="delete" class="btn btn-danger btn-sm" value="<?php echo $rollno ;?>"></h5>
+<h5 style="color:red;">Delete folder <i class="fa fa-trash " aria-hidden="true">: </i><input type="submit" name="delete" class="btn btn-danger btn-sm" value="<?php echo $rollno ;?>"></h5>
 </form>
                         
                         <!-- END SIDEBAR BUTTONS -->
@@ -136,7 +167,7 @@
                                 if (mysqli_num_rows($result) == 1)
                                 echo $row['full_name'];
                                 else
-                                echo '<h3>There does not exists any record</h3>';
+                                echo '';
                                 ?>
                         
                         <!-- <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span> -->
@@ -148,16 +179,21 @@
                             <a href="<?php echo $row['rait_id'];?>"><?php echo $row['rait_id'];?></a>
                         </div>
                         <div class="margin-top-20 profile-desc-link">
-                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-google"></i>
                             <?php $query="select email from student_info where roll_no='$rollno';";
                                   $result= mysqli_query($conn,$query);
                                   $row= mysqli_fetch_assoc($result);?>
                             <a href="<?php echo $row['email'];?>"><?php echo $row['email'];?> </a>
                         </div>
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-phone"></i>
+                            <?php $query="select mob_no from student_info where roll_no='$rollno';";
+                                  $result= mysqli_query($conn,$query);
+                                  $row= mysqli_fetch_assoc($result);?>
+                            <p><?php echo $row['mob_no'];?></p>
+                        </div>
    </div></div>                   
-                                                
-                
-                
+                                              
                     </div>
                 </div>
                 <div class="col-md-9">

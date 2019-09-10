@@ -144,8 +144,8 @@ display_c();
 	<h2 align="left">Home Page</h2>
   <span id='ct' style="float:left;background-color:black;color:white;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
-	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
-    	<p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'" class="fa fa-close"> LogOut</a> </p>
+	<p align="right" style="font-size:30px;margin-left:600px;"<i class="fa fa-smile-o" aria-hidden="true"></i>Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
+    	<p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
 
   </div>
 
