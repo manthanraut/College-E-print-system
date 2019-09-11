@@ -53,7 +53,7 @@ if(isset($_POST["action"]))
 {
  if($_POST["action"] == "fetch")
  {
-  $folder = array_filter(glob('*'), 'is_dir');
+  $folder = array_filter(glob('doc/*'), 'is_dir');
   $roll_no=$rollno;
   $output = '
   <table class="table table-bordered table-striped">
@@ -161,10 +161,11 @@ if(isset($_POST["action"]))
    }
    else
    {
-    $path = $_POST["folder_name"] . '/' . $file;
+    $path = 'doc/'.$_POST["folder_name"] . '/' . $file;
+    $fold = "doc/".$_POST["folder_name"];
     $output .= '
     <tr>
-     <td contenteditable="true" data-folder_name="'.$_POST["folder_name"].'"  data-file_name = "'.$file.'" class="change_file_name">'.$file.'</td>
+     <td contenteditable="true" data-folder_name="'.$fold.'"  data-file_name = "'.$fold.'" class="change_file_name">'.$file.'</td>
      <td><button name="remove_file" class="remove_file btn btn-danger btn-xs" id="'.$path.'">Remove</button></td>
     </tr>
     ';
@@ -176,9 +177,9 @@ if(isset($_POST["action"]))
  
  if($_POST["action"] == "remove_file")
  {
-  if(file_exists($_POST["path"]))
+    if(file_exists(substr($_POST["path"],4,strlen($_POST["path"]))))
   {
-   unlink($_POST["path"]);
+   unlink(substr($_POST["path"],4,strlen($_POST["path"])));
    echo 'File Deleted';
   }
  }

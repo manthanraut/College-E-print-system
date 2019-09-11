@@ -1,10 +1,10 @@
 <?php 
   session_start(); 
 
-  if (!isset($_SESSION['fullname'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location: http://localhost/College-E-print-system/signin.php');
-  }
+  // if (!isset($_SESSION['fullname'])) {
+  // 	$_SESSION['msg'] = "You must log in first";
+  // 	header('location: http://localhost/College-E-print-system/signin.php');
+  // }
   if (isset($_POST['logout'])) {
   	session_destroy();
   	unset($_SESSION['fullname']);
@@ -144,9 +144,8 @@ display_c();
 	<h2 align="left">Home Page</h2>
   <span id='ct' style="float:left;background-color:black;color:white;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
-	<p align="right" style="font-size:30px;margin-left:600px;"<i class="fa fa-smile-o" aria-hidden="true"></i>Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
-    	<p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
-
+	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
+  <p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
   </div>
 
 <br /><br />
@@ -247,7 +246,7 @@ $(document).ready(function(){
  
  $(document).on('click', '#create_folder', function(){
   $('#action').val("create");
-  $('#folder_name').val('');
+  $('#folder_name').val('doc/');
   $('#folder_button').val('Create');
   $('#folderModal').modal('show');
   $('#old_name').val('');
@@ -363,7 +362,7 @@ $(document).ready(function(){
  });
 
 $(document).on('blur', '.change_file_name', function(){
-  var folder_name = $(this).data("folder_name");
+  var folder_name = "doc/".$(this).data("folder_name");
   var old_file_name = $(this).data("file_name");
   var new_file_name = $(this).text();
   var action = "change_file_name";

@@ -179,7 +179,23 @@ input.chkbox {
 	left:calc(50% - 50px);
 	border-radius:50%;
 }
- 
+@media only screen and (max-width: 373px) {
+	.loginBox
+{
+	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+	position:absolute;
+	top:60%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:350px;
+	height:440px;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background-color:white;
+	border-radius:20px;
+	
+}
+}
 </style>
 <script type="text/javascript">
 function display_c(){

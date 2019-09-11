@@ -148,6 +148,22 @@ small{
 	left:calc(50% - 50px);
 	border-radius:20%;
 }
+/* Samsung Galaxy S5 Portrait */    
+@media (min-width: 320px) and (max-width: 420px) {  
+  .container{
+  box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+  position:absolute;
+	top:62%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:300px;
+	height:auto;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background-color:white;
+ 
+}
+}
 </style>
 <script type="text/javascript">
 function display_c(){
@@ -175,7 +191,7 @@ display_c();
 </ul>
         <form action="http://localhost/College-E-print-system/validate1.php" method="POST" autocomplete="off">
         <div class="container">
-        <img src="imgs/userverification.png" class="user">
+        
             <div class="row">
                
                 <div class="row">

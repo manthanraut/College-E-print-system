@@ -87,6 +87,23 @@ li a:hover:not(.active) {
 	background-color:white;
 	
 }
+@media (min-width: 320px) and (max-width: 420px) {
+	.loginBox
+{
+	border-radius:20px;
+	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+	position:absolute;
+	top:57%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:350px;
+	height:450px;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background-color:white;
+	
+}
+}
 ::placeholder {
   color: black;
   opacity: 1; /* Firefox */
