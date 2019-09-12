@@ -179,12 +179,12 @@ input.chkbox {
 	left:calc(50% - 50px);
 	border-radius:50%;
 }
-@media only screen and (max-width: 373px) {
+@media (min-width: 320px) and (max-width: 420px) { 
 	.loginBox
 {
 	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
 	position:absolute;
-	top:60%;
+	top:65%;
 	left:50%;
 	transform: translate(-50%, -50%);
 	width:350px;

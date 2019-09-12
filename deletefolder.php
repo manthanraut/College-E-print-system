@@ -12,8 +12,10 @@ $dirPath="doc/".$foldername;
             if ($object != "." && $object !="..") {
                 if (filetype($dirPath . DIRECTORY_SEPARATOR . $object) == "dir") {
                     deleteDirectory($dirPath . DIRECTORY_SEPARATOR . $object);
+                    echo '<script>alert("Folder deleted successfully");</script>';
                 } else {
                     unlink($dirPath . DIRECTORY_SEPARATOR . $object);
+                    echo '<script>alert("Folder deleted successfully");</script>';
                 }
             }
         }
@@ -23,3 +25,4 @@ $dirPath="doc/".$foldername;
 	header("Location: http://localhost/College-E-print-system/admin.php");
 }
 	?>
+fa-search

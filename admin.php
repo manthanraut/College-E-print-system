@@ -27,7 +27,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/admin_demo.css">
-
     <style>
     body, html {
   height: 100%;
@@ -58,35 +57,167 @@ a:hover{
   color:red;
   background-color:white;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height:100px;
+  overflow: hidden;
+  background-color:#e60000;
+  font-family:new time roman;
+}
+
+li {
+  float: left;
+  font-size:20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color:black;
+  font-size:25px;
+
+}
+form.example input[type=text] {
+  margin-top: 26px;
+  font-size: 17px;
+  height:37px;
+  margin-left:550px;
+  border: 1px solid grey;
+  float: left;
+  width: 25%;
+  border-radius:20px;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  margin-left:10px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  margin-top:26px;
+  height:37px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  form.example input[type=text] {
+  margin-left:400px;
+}
+}
+@media (min-width: 320px) and (max-width: 612px) {
+  form.example input[type=text] {
+  margin-left:300px;
+}
+}
+@media (min-width: 320px) and (max-width: 511px) {
+  form.example input[type=text] {
+  margin-left:400px;
+  margin-top:300px;
+}
+}
+@media (min-width: 320px) and (max-width: 969px) {
+  form.example input[type=text] {
+  margin-left:230px;
+}
+}
+@media (min-width: 320px) and (max-width: 972px) {
+  form.example input[type=text] {
+  margin-left:300px;
+}
+}
+@media (min-width: 320px) and (max-width: 707px) {
+  form.example input[type=text] {
+  margin-left:170px;
+}
+}
+@media (min-width: 320px) and (max-width: 507px) {
+  form.example input[type=text] {
+  margin-left:60px;
+  width:37%;
+  margin-top:20px;
+}
+form.example input[type=button]{
+  margin-left:50px;
+  margin-top:20px;
+}
+ul{
+  height:140px;
+}
+}
+
+@media (min-width: 320px) and (max-width: 357px) {
+  form.example input[type=text] {
+  margin-left:60px;
+  width:40%;
+  margin-top:20px;
+}
+form.example input[type=button]{
+  margin-left:60px;
+  margin-top:20px;
+}
+ul{
+  height:140px;
+}
+}
+@media (min-width: 320px) and (max-width: 356px) {
+  form.example input[type=text] {
+  margin-left:60px;
+  width:37%;
+  margin-top:20px;
+}
+form.example input[type=button]{
+  margin-left:150px;
+  margin-top:0px;
+}
+ul{
+  height:200px;
+}
+}
+@media (min-width: 320px) and (max-width: 817px) {
+  form.example input[type=text] {
+  margin-left:200px;
+}
+}
+@media (min-width: 320px) and (max-width: 662px) {
+  form.example input[type=text] {
+  margin-left:100px;
+}
+}
     </style>
     </head>
     <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F30F0F;" ><!--style="background-color:#ea550e"-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            
-                <img src="imgs/a_icon.png" width="40" height="40" class="d-inline-block align-top" alt="" >
-        
-            
-            <!--<a class="navbar-brand" href="#">ADMIN</a>-->
-          
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-              <a id="logout" href="admin_login.php?logout='1'" style="margin-left:30px;font-size:20px;border:5px solid white ;padding:10px;color:black;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a>
-                </li>
-              </ul>
-              <form class="form-inline my-lg-1 col-md-4" method="POST" autocomplete="off">
-                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Enter Roll number" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:black;padding:5px;background-color:#FFF300;"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
-               
-                
-              </form>
-            </div>
-          </nav>
+    <ul>
+              <li><img src="imgs/a_icon.png" width="60" height="60" style="margin-top:16px;margin-left:20px;" class="d-inline-block align-top" alt="" ></li>
+             <li><a id="logout" href="admin_login.php?logout='1'" style="margin-top:17px;margin-left:30px;background-color:orange;font-size:20px;padding:10px;color:black;border:3px solid white;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
+              <form class="example" autocomplete="off"  method="post">
+  <input type="text" placeholder="  Enter Roll Number.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+        </ul>
           <?php 
           if(!isset($_POST['search'])) : ?>
             Enter roll no
@@ -211,7 +342,7 @@ a:hover{
                 endif;
               
                 echo "<a href='doc/$rollno/$value' class='card-link'><h4 style='color:blue;border: solid black;border-width:3px;
-                width: 230px;border-radius:6px;font-family:cortana;background-color:white;'>$value</h4></a>";
+                width: 230px;border-radius:6px;padding:10px;font-family:cortana;background-color:white;'><i class='fa fa-file' aria-hidden='true'></i> $value</h4></a>";
               endforeach; 
             endif;
           endif;?>
