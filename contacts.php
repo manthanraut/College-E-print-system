@@ -159,7 +159,7 @@ display_c();
   <div class="column">
     <div class="card">
   <img src="imgs/shayantan.jpg" alt="Shayantan" style="width:100%;">
-  <h1>Shyantan Santra</h1>
+  <h1>Shayantan Santra</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
   <h4 style="color:red;">Mail ID: shayantan.santra@gmail.com</h4>
   <div style="margin: 24px 0;">
