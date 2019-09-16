@@ -74,13 +74,13 @@ if(isset($_POST["action"]))
        if ($name!='imgs' && $name!='css'){
     $output .= '
      <tr>
-      <td>'.$name.'</td>
+      <td><i class="fa fa-folder" aria-hidden="true"></i> '.substr($name,4,strlen($name)).'</td>
       <td>'.(count(scandir($name)) - 2).'</td>
       <td>'.get_folder_size($name).'</td>
       <td><button type="button" name="update" data-name="'.$name.'" class="update btn btn-warning btn-xs">Update</button></td>
-      <td><button type="button" name="delete" data-name="'.$name.'" class="delete btn btn-danger btn-xs">Delete</button></td>
-      <td><button type="button" name="upload" data-name="'.$name.'" class="upload btn btn-info btn-xs">Upload File</button></td>
-      <td><button type="button" name="view_files" data-name="'.$name.'" class="view_files btn btn-default btn-xs">View Files</button></td>
+      <td><button type="button" name="delete" data-name="'.$name.'" class="delete btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button></td>
+      <td><button type="button" name="upload" data-name="'.$name.'" class="upload btn btn-info btn-xs"><i class="fa fa-upload" aria-hidden="true"></i> Upload File</button></td>
+      <td><button type="button" name="view_files" data-name="'.$name.'" class="view_files btn btn-default btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View Files</button></td>
      </tr>';
    }
 }
@@ -165,8 +165,8 @@ if(isset($_POST["action"]))
     $fold = "doc/".$_POST["folder_name"];
     $output .= '
     <tr>
-     <td contenteditable="true" data-folder_name="'.$fold.'"  data-file_name = "'.$fold.'" class="change_file_name">'.$file.'</td>
-     <td><button name="remove_file" class="remove_file btn btn-danger btn-xs" id="'.$path.'">Remove</button></td>
+     <td contenteditable="true" data-folder_name="'.$fold.'"  data-file_name = "'.$fold.'" class="change_file_name"><i class="fa fa-file" aria-hidden="true"></i> '.$file.'</td>
+     <td><button name="remove_file" class="remove_file btn btn-danger btn-xs" id="'.$path.'"><i class="fa fa-times" aria-hidden="true"></i> Remove</button></td>
     </tr>
     ';
    }

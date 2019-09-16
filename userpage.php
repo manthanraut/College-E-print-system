@@ -153,7 +153,7 @@ display_c();
    <h2 align="center">Make a folder by your Roll No. and Upload Your files inside it </a></h2>
    <br />
    <div align="right">
-    <button type="button" name="create_folder" id="create_folder" class="btn btn-success">Create</button>
+    <button type="button" name="create_folder" id="create_folder" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Create</button>
    </div>
    <br />
    <div class="table-responsive" id="folder_table">
