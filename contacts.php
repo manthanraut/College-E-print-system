@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -32,7 +30,6 @@ body{
   margin-bottom: 16px;
   padding: 0 8px;
 }
-
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -47,12 +44,9 @@ body{
   font-family: arial;
   background-color:rgba(0,0,0,0.1);
 }
-
-
 .container {
   padding: 0 16px;
 }
-
 .container::after, .row::after {
   content: "";
   clear: both;
@@ -70,7 +64,6 @@ button {
   width: 100%;
   font-size: 18px;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -78,26 +71,21 @@ ul {
   overflow: hidden;
   background-color:#e60000;
 }
-
 li {
   float: left;
   font-size:20px;
 }
-
 li a {
   display: block;
   color: white;
   text-align: center;
-
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:hover:not(.active) {
   background-color: white;
   color:black;
   font-size:25px;
-
 }
 .mail{
   font-family: monospace;
@@ -108,8 +96,6 @@ a {
   font-size: 22px;
   color: black;
 }
-
-
 button:hover{ 
   opacity: .6;
 }
@@ -125,7 +111,6 @@ function display_c(){
 var refresh=1000; // Refresh rate in milli seconds
 mytime=setTimeout('display_ct()',refresh)
 }
-
 function display_ct() {
 var x = new Date()
 document.getElementById('ct').innerHTML = String(x).slice(0,25);
@@ -158,7 +143,6 @@ display_c();
   </div>
 </div>
     </div>
-
   <div class="column">
     <div class="card" style="height:600px;width:380px;">
   <img src="imgs/manthan.jpg" alt="Manthan" style="width:100%;height:65%;">
@@ -186,6 +170,5 @@ display_c();
 </div>
   </div>
 </div>
-
 </body>
 </html>
