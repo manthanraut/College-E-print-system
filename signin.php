@@ -157,7 +157,7 @@ li a {
 li a:hover:not(.active) {
   background-color: white;
   color:black;
-  font-size:25px;
+  
 
 }
 input.chkbox { 
@@ -207,7 +207,6 @@ function display_ct() {
 var x = new Date()
 document.getElementById('ct').innerHTML = String(x).slice(0,25);
 document.getElementById('ct').style.fontSize='20px';
-document.getElementById('ct').style.color='white';
 display_c();
  }
 </script>
@@ -217,7 +216,7 @@ display_c();
   <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
   <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
-  <span id='ct' style="float:right;background-color:black;color:white;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
+  <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 </ul>
 			

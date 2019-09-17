@@ -84,29 +84,27 @@ li a {
 li a:hover:not(.active) {
   background-color: white;
   color:black;
-  font-size:25px;
+  
 
 }
 form.example input[type=text] {
-  margin-top: 26px;
+  
   font-size: 17px;
   height:37px;
-  margin-left:550px;
+ margin-right:10px;
   border: 1px solid grey;
   float: left;
-  width: 25%;
+  width: 75%;
   border-radius:20px;
   background: #f1f1f1;
 }
 
 form.example button {
-  float: left;
-  width: 10%;
-  margin-left:10px;
+  width:35%;
   padding: 10px;
+  margin-left:200px;
   background: #2196F3;
   color: white;
-  margin-top:26px;
   height:37px;
   font-size: 17px;
   border: 1px solid grey;
@@ -123,111 +121,89 @@ form.example::after {
   clear: both;
   display: table;
 }
-@media (min-width: 320px) and (max-width: 1200px) {
-  form.example input[type=text] {
-  margin-left:400px;
-}
-}
-@media (min-width: 320px) and (max-width: 612px) {
-  form.example input[type=text] {
-  margin-left:300px;
-}
-}
-@media (min-width: 320px) and (max-width: 511px) {
-  form.example input[type=text] {
-  margin-left:400px;
-  margin-top:300px;
-}
-}
-@media (min-width: 320px) and (max-width: 969px) {
-  form.example input[type=text] {
-  margin-left:230px;
-}
-}
-@media (min-width: 320px) and (max-width: 972px) {
-  form.example input[type=text] {
-  margin-left:300px;
-}
-}
-@media (min-width: 320px) and (max-width: 707px) {
-  form.example input[type=text] {
-  margin-left:170px;
-}
-}
-@media (min-width: 320px) and (max-width: 507px) {
-  form.example input[type=text] {
-  margin-left:60px;
-  width:37%;
-  margin-top:20px;
-}
-form.example input[type=button]{
-  margin-left:50px;
-  margin-top:20px;
+@media only screen and (max-width: 1300px) {
+  #searchfield{
+margin-right:200px;
+margin-top:20px;
 }
 ul{
-  height:140px;
+  height:250px;
 }
+}
+@media only screen and (max-width: 400px) {
+  #searchfield{
+    left:10%;
+margin-left:500px;
+margin-top:20px;
+}
+}
+@media only screen and (max-width: 325px) {
+  #searchfield{
+    left:20%;
+    right:5%;
+margin-left:500px;
+margin-top:20px;
+}
+}
+#searchfield{
+  position:relative;
+  float:right;
+  width:auto;
+  padding:10px;
+margin-right:100px;
+margin-top:20px;
+}
+.button {
+  background-color: orange; /* Green */
+  border: none;
+  color: black;
+  border:2px solid white;
+  font-size:19px;
+  margin-left:10px;
+  margin-top:18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.button:hover{
+color:white;
+background-color:red;
 }
 
-@media (min-width: 320px) and (max-width: 357px) {
-  form.example input[type=text] {
-  margin-left:60px;
-  width:40%;
-  margin-top:20px;
-}
-form.example input[type=button]{
-  margin-left:60px;
-  margin-top:20px;
-}
-ul{
-  height:140px;
-}
-}
-@media (min-width: 320px) and (max-width: 356px) {
-  form.example input[type=text] {
-  margin-left:60px;
-  width:37%;
-  margin-top:20px;
-}
-form.example input[type=button]{
-  margin-left:150px;
-  margin-top:0px;
-}
-ul{
-  height:200px;
-}
-}
-@media (min-width: 320px) and (max-width: 817px) {
-  form.example input[type=text] {
-  margin-left:200px;
-}
-}
-@media (min-width: 320px) and (max-width: 662px) {
-  form.example input[type=text] {
-  margin-left:100px;
-}
-}
     </style>
+    <script>
+    function change(){
+      document.getElementById('container').style.display="none";
+      document.getElementById('result').style.display="block";
+    }
+    function change2(){
+      document.getElementById('container').style.display="block";
+      document.getElementById('result').style.display="none";
+    }
+    </script>
     </head>
     <body>
     <ul>
-              <li><img src="imgs/a_icon.png" width="60" height="60" style="margin-top:16px;margin-left:20px;" class="d-inline-block align-top" alt="" ></li>
-             <li><a id="logout" href="admin_login.php?logout='1'" style="margin-top:17px;margin-left:30px;background-color:orange;font-size:20px;padding:10px;color:black;border:3px solid white;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
+              <li><img src="imgs/a_icon.png" width="60" height="60" style="display:none;margin-top:16px;margin-left:20px;" class="d-inline-block align-top" alt="" ></li>
+              <li><a href="javascript:change()" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download Gadget</a>
+              <li><a href="javascript:change2()" class="button">View Files</a>
+             <li><a class="button" href="admin_login.php?logout='1'" style="margin-top:18px;margin-left:10px;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
+            
               <form class="example" autocomplete="off"  method="post">
+              <div id="searchfield" >
   <input type="text" placeholder="  Enter Roll Number.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
 </form>
         </ul>
           <?php 
           if(!isset($_POST['search'])) : ?>
-            Enter roll no
-            
+  
             <?php 
           else : 
              $rollno=$_POST["search"]; 
              if($rollno==""):?>
-                Enter roll no
-            
               <?php 
               else :
               $results_array = array(); 
@@ -246,7 +222,7 @@ ul{
                 endif;?>
 
 
-<div class="container">
+<div id="container">
             <div class="row profile">
                 <div class="col-md-3">
                     <div class="profile-sidebar">
@@ -346,6 +322,78 @@ ul{
               endforeach; 
             endif;
           endif;?>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div id="result">
+        <form class="example" autocomplete="off"  method="post">
+        <div style="background-color:white;width:100%;height:100px;">
+              <div id="searchfield" >
+  <input type="text" placeholder="Enter month & year" style="width:74%;border:none;border-bottom:2px solid black;" name="year">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  </div></div>
+</form>
+        <?php 
+          if(!isset($_POST['year'])) : ?>
+        
+            <?php 
+          else : 
+            $year=$_POST["year"]; 
+             if($year==""):?>
+             
+            
+              <?php 
+              else :
+              $results_array = array(); 
+              $log_directory = 'results/'.$year;
+              if (is_dir($log_directory)) : 
+                      if ($handle = opendir($log_directory)) :
+                      
+                              //Notice the parentheses I added:
+                              while(($file = readdir($handle)) !== FALSE) :
+                              
+                                      $results_array[] = $file;
+                              endwhile;
+                              closedir($handle);
+                        endif; 
+                endif;?>
+
+            <div>
+                <div>
+                    <div class="profile-sidebar" style="display:none;">
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                            </div>
+                        </div>
+                <div class="portlet light bordered">
+                    <!-- STAT -->
+                
+                    <div>
+                        <div class="margin-top-20 profile-desc-link">
+                        </div>
+                        <div class="margin-top-20 profile-desc-link">
+                        </div>
+                        <div class="margin-top-20 profile-desc-link">
+                        </div></div></div>                            
+                    </div>
+                </div>
+                <div>
+                    <div class="profile-content">
+              <?php //Output findings
+              foreach($results_array as $value):
+               //$file = $value;
+                // echo '<div class="card border-primary mb-3" style="max-width: 18rem;">';
+                if($value=="." || $value==".."):
+                  continue;
+                endif;
+              
+                echo "<a href='results/$year/$value' target='_blank' class='card-link'><h4 style='color:blue;border: solid black;border-width:1px;
+                width: 100%;border-radius:6px;padding:10px;font-family:cortana;background-color:white;'><i class='fa fa-file' aria-hidden='true'></i> $value</h4></a>";
+              endforeach;
+            endif;
+            endif?>
                     </div>
                 </div>
             </div>

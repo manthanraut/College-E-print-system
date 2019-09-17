@@ -129,7 +129,6 @@ function display_ct() {
 var x = new Date()
 document.getElementById('ct').innerHTML = String(x).slice(0,25);
 document.getElementById('ct').style.fontSize='20px';
-document.getElementById('ct').style.color='white';
 display_c();
  }
 </script>
@@ -142,7 +141,7 @@ display_c();
 
 <div class="header">
 	<h2 align="left">Home Page</h2>
-  <span id='ct' style="float:left;background-color:black;color:white;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
+  <span id='ct' style="float:left;background-color:white;color:black;border:2px solid black;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
   <p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
