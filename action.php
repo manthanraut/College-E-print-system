@@ -1,5 +1,4 @@
 <?php
-
 include 'server.php';
 function format_folder_size($size)
 {
@@ -53,7 +52,15 @@ if(isset($_POST["action"]))
 {
  if($_POST["action"] == "fetch")
  {
-  $folder = array_filter(glob('doc/*'), 'is_dir');
+     $fullname=$_SESSION['fullname'];
+    $getrollno="select roll_no from student_rait_data where sname='$fullname';";
+	$result=mysqli_query($db,$getrollno);
+    if (mysqli_num_rows($result) == 1) {
+		$row = mysqli_fetch_assoc($result);
+        $roll=$row["roll_no"];
+    }
+    $dw='doc/'.$roll;
+  $folder = array_filter(glob($dw), 'is_dir');
   $roll_no=$rollno;
   $output = '
   <table class="table table-bordered table-striped">

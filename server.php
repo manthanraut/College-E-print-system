@@ -43,14 +43,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 
 			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
-			echo '<script>
-			Swal.fire(
-				"Signed Up Successfully",
-				"<a href="http://localhost/College-E-print-system/home.php">,
-				"success"
-			  )
-			</script>';
-			#header('location: http://localhost/College-E-print-system/home.php');
+		header('location: http://localhost/College-E-print-system/home.php');
 		}
 
 	// ... 
