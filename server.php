@@ -48,7 +48,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 
 	// 
 
-	// LOGIN USER
+	// LOGIN 
 	if (isset($_POST['login_user'])) {
 	    $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['passwd']);
