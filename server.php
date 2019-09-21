@@ -46,7 +46,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 		header('location: http://localhost/College-E-print-system/home.php');
 		}
 
-	// ... 
+	// 
 
 	// LOGIN USER
 	if (isset($_POST['login_user'])) {
