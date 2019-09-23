@@ -164,6 +164,12 @@ small{
  
 }
 }
+@media only screen  and (max-width: 349px) { 
+.container{
+  top:75%;
+  height:450px;
+}
+}
 </style>
 <script type="text/javascript">
 function display_c(){

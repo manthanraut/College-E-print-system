@@ -110,6 +110,13 @@ h2
 	border-radius:20px;
 	
 }
+@media only screen  and (max-width: 349px) { 
+	.loginBox
+{
+	top:60%;
+	width:300px;	
+}
+}
 .loginBox input[type="email"]
 {
     

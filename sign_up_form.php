@@ -169,7 +169,12 @@ width:350px;
   border-radius:16px;
    }
   }
-
+  @media only screen  and (max-width: 349px) { 
+  .signup{
+    top:78%;
+width:330px;
+  }
+  }
 
       </style>
     <meta charset="utf-8">

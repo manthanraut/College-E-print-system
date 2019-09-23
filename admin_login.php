@@ -103,6 +103,11 @@ li a:hover:not(.active) {
 	background-color:white;
 	
 }
+@media only screen  and (max-width: 349px) { 
+	.loginBox{
+		top:70%;
+		width:320px;
+	}
 }
 ::placeholder {
   color: black;

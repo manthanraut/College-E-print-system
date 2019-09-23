@@ -1,6 +1,5 @@
 <?php 
   session_start(); 
-
   // if (!isset($_SESSION['fullname'])) {
   // 	$_SESSION['msg'] = "You must log in first";
   // 	header('location: http://localhost/College-E-print-system/signin.php');
@@ -35,7 +34,6 @@ body {
 	font-size: 120%;
 	background: #F8F8FF;
 }
-
 .header {
 	width: 100%;
 	color: white;
@@ -60,7 +58,6 @@ form, .content {
 .input-group {
 	margin: 10px 0px 10px 0px;
 }
-
 .input-group label {
 	display: block;
 	text-align: left;
@@ -108,23 +105,17 @@ a:link, a:visited {
   border-radius:15px;
   font-size:25px;
 }
-
 a:hover, a:active {
   background-color: red;
   text-decoration: none;
   color:white;
-
 }
-
-
-
     </style>
     <script type="text/javascript">
 function display_c(){
 var refresh=1000; // Refresh rate in milli seconds
 mytime=setTimeout('display_ct()',refresh)
 }
-
 function display_ct() {
 var x = new Date()
 document.getElementById('ct').innerHTML = String(x).slice(0,25);
@@ -140,7 +131,7 @@ display_c();
 <body  onload=display_ct();>
 
 <div class="header">
-	<h2 align="left">Home Page</h2>
+
   <span id='ct' style="float:left;background-color:white;color:black;border:2px solid black;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
@@ -359,7 +350,6 @@ $(document).ready(function(){
    });
   }
  });
-
 $(document).on('blur', '.change_file_name', function(){
   var folder_name = "doc/".$(this).data("folder_name");
   var old_file_name = $(this).data("file_name");

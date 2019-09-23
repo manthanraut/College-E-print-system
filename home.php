@@ -25,18 +25,6 @@ body, html {
   margin: 0;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("wall1.jpg");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 footer {
   position: relative;
   left: 0;
@@ -72,6 +60,19 @@ li a:hover:not(.active) {
   color:black;
 }
 
+.w3-content{
+  width:100%;
+  height: 100%;
+}
+@media only screen  and (max-width: 349px) { 
+  .w3-content{
+  width:95%;
+  height: 100%;
+}
+body{
+  height:35%;
+}
+}
 </style>
 <script type="text/javascript"> 
 function display_c(){
@@ -99,7 +100,7 @@ display_c();
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
 
-<div class="w3-content w3-section" style="width:100%;height: 100%;">
+<div class="w3-content w3-section">
 
   <img class="mySlides" src="imgs/dyp1.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">
   <img class="mySlides" src="imgs/dyp3.jpg" style="width:100%;border-radius:20px;box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);">

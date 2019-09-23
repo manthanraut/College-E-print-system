@@ -195,6 +195,12 @@ input.chkbox {
 	border-radius:20px;
 	
 }
+@media only screen  and (max-width: 349px) { 
+	.loginBox
+{
+	top:78%;
+	width:320px;
+}
 }
 </style>
 <script type="text/javascript">
