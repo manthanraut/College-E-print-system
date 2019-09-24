@@ -119,6 +119,7 @@ document.getElementById('ct').style.fontSize='20px';
 display_c();
  }
 </script>
+<title>Contact details</title>
 </head>
 <body onload=display_ct();>
 <ul>
@@ -132,7 +133,7 @@ display_c();
 <div class="row">
   <div class="column">
     <div class="card">
-  <img src="imgs/akilesh.jpg" alt="Akilesh" style="width:100%;">
+  <img src="imgs/akilesh.png" alt="Akilesh" style="width:100%;">
   <h1>Akilesh Salunkhe</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
   <h4 style="color:red;">Mail ID:<br>akileshsalunkhe99@gmail.com</h4>
@@ -144,8 +145,8 @@ display_c();
 </div>
     </div>
   <div class="column">
-    <div class="card" style="height:600px;width:380px;">
-  <img src="imgs/manthan.jpg" alt="Manthan" style="width:100%;height:65%;">
+    <div class="card" style="height:524px;width:380px;">
+  <img src="imgs/manthan.png" alt="Manthan" style="width:100%;height:60%;">
   <h1>Manthan Raut</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
   <h4 style="color:red;">Mail ID:<br>manthanraut16@gmail.com</h4>
@@ -158,7 +159,7 @@ display_c();
   </div>
   <div class="column">
     <div class="card">
-  <img src="imgs/shayantan.jpg" alt="Shayantan" style="width:100%;">
+  <img src="imgs/shayantan.ico" alt="Shayantan" style="width:100%;">
   <h1>Shayantan Santra</h1>
   <p>RAIT,D Y Patil University,Navi Mumbai</p>
   <h4 style="color:red;">Mail ID: shayantan.santra@gmail.com</h4>

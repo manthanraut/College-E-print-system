@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Reset Password</title>
+		<title>Forgot Password</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Add icon library -->

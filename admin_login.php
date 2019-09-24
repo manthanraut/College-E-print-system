@@ -101,7 +101,7 @@ li a:hover:not(.active) {
 	padding:80px 40px;
 	box-sizing: border-box;
 	background-color:white;
-	
+}
 }
 @media only screen  and (max-width: 349px) { 
 	.loginBox{
