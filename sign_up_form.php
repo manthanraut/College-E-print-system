@@ -175,7 +175,19 @@ width:350px;
 width:330px;
   }
   }
-
+  body { 
+			animation: fadeInAnimation ease 3s; 
+		
+			animation-fill-mode: forwards; 
+		} 
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: .9; 
+			} 
+    } 
       </style>
     <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -220,7 +232,7 @@ display_c();
     </head>
     <body  onload=display_ct();>
     <ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
   <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
   <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>

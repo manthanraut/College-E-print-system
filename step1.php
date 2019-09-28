@@ -167,7 +167,19 @@ input.chkbox {
 
 	text-decoration:underline;
 }
-
+body { 
+			animation: fadeInAnimation ease 3s; 
+		
+			animation-fill-mode: forwards; 
+		} 
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: .9; 
+			} 
+    } 
 </style>
 <script>
 function validateemail(form){
@@ -184,7 +196,7 @@ if(reg.test(Email.value)){
 	</head>
 	<body>
 	<ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;">Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;">Home</a></li>
   
 
 </ul>

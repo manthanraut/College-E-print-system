@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/footer-distributed.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
+<link rel="stylesheet" href="css1/style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css1/bootstrap.min.css">
+    <!-- MAIN CSS -->
+<style>
+body{
+ background-image: url("images/bg5.jpg");
+  /* Full height */
+  height: 100%;
+width:100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+button {
+  position: relative;
+  height: 45px;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+body { 
+			animation: fadeInAnimation ease 3s; 
+		
+			animation-fill-mode: forwards; 
+		} 
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: .9; 
+			} 
+    } 
+    footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:140px;
+  padding:20px;
+}
+</style>
+
+  </head>
+
+  <body>
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="block-2 red">
+              <span class="wrap-icon">
+                <span class="fa fa-sign-in"></span>
+              </span>
+              <h1 style="font-family:cambria;color:white;">Sign In Here</h1>
+			  <form action="http://localhost/College-E-print-system/signin.php">
+              <button class="fill"><i class="fa fa-sign-in" aria-hidden="true"></i>  Sign In</button></form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="block-2 yellow">
+              <span class="wrap-icon">
+                <span class="fa fa-user-plus"></span>
+              </span>
+              <h1 style="font-family:cambria;color:white;">Sign Up Here</h1>
+			  <form action="http://localhost/College-E-print-system/verified.php">
+              <button class="fill" ><i class="fa fa-user-plus" aria-hidden="true"></i>  Sign Up</button></form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="block-2 teal">
+              <span class="wrap-icon">
+                <span class="fa fa-address-card "></span>
+              </span>
+             <h1 style="font-family:cambria;color:white;">About Us</h1>
+			 <form action="http://localhost/College-E-print-system/contacts.php">
+              <button class="fill"><i class="fa fa-address-book" aria-hidden="true"></i>  About Us</button></form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-distributed" style="opacity:.8;">
+
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/akilesh-salunkhe-570b45148/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/manthanraut" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.youtube.com/channel/UC6QJjXIGwOug_zDRdygHuXg/featured" target="_blank"><i class="fa fa-youtube"></i></a>
+
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="http://localhost/College-E-print-system/contacts.php"> About Us</a>
+          ~
+          <a href="http://localhost/College-E-print-system/signin.php">  Sign In</a>
+          ~
+          <a href="http://localhost/College-E-print-system/verified.php">  Sign Up</a>
+         
+        </p>
+
+        <p>Company Name : SAM &copy; 2019</p>
+      </div>
+
+    </footer>
+  </body>
+
+</html>
+

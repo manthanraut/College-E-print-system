@@ -1,0 +1,105 @@
+
+
+ Blocks 
+.site-section-cover {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden; }
+  .site-section-cover,
+  .site-section-cover .container {
+    position: relative;
+    z-index: 2; }
+  .site-section-cover,
+  .site-section-cover .container > .row {
+    height: calc(100vh - 196px);
+    min-height: 777px; }
+    @media (max-width: 991.98px) {
+      .site-section-cover,
+      .site-section-cover .container > .row {
+        height: calc(70vh - 196px);
+        min-height: 777px; 
+		margin-top:30px;
+		} }
+  .site-section-cover.overlay {
+    position: relative; }
+    .site-section-cover.overlay:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1; }
+  .site-section-cover.inner-page,
+  .site-section-cover.inner-page .container > .row {
+    height: auto;
+    min-height: auto;
+    padding: 2em 0; }
+  .site-section-cover.img-bg-section {
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .site-section-cover h1 {
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1; }
+    @media (max-width: 991.98px) {
+      .site-section-cover h1 {
+        font-size: 2rem; } }
+  .site-section-cover p {
+    font-size: 18px;
+    color: #fff; }
+
+.site-section {
+  padding: 7rem 0; }
+  @media (max-width: 991.98px) {
+    .site-section {
+      padding: 3rem 0; 
+	  padding-top:30px;
+	  } }
+
+
+.block-2 {
+  padding: 40px;
+  border-radius:20px;
+  margin-top:200px;
+  position: relative;
+  text-align: center; }
+  .block-2 .wrap-icon {
+    position: relative;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    display: block;
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-bottom: 30px; }
+    .block-2 .wrap-icon > span {
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .block-2 h2 {
+    font-size: 18px;
+    color: #fff; }
+  .block-2 p {
+    color: rgba(255, 255, 255, 0.7); }
+  .block-2.red,
+  .block-2.red .wrap-icon {
+    background-color: #fd4d40; }
+  .block-2.yellow,
+  .block-2.yellow .wrap-icon {
+    background-color: #fdb62f; }
+  .block-2.teal,
+  .block-2.teal .wrap-icon {
+    background-color: #16c3b0; }

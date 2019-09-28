@@ -105,6 +105,19 @@ a:hover {
 p,h4,h1{
   font-family:new time roman;
 }
+body { 
+			animation: fadeInAnimation ease 3s; 
+		
+			animation-fill-mode: forwards; 
+		} 
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: .9; 
+			} 
+    } 
 </style>
 <script type="text/javascript"> 
 function display_c(){
@@ -123,10 +136,9 @@ display_c();
 </head>
 <body onload=display_ct();>
 <ul>
-  <li><a href="http://localhost/College-E-print-system/home.php" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
   <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
   <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
-  <li><a href="http://localhost/College-E-print-system/admin_login.php" style="float:right;"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
   

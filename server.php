@@ -43,7 +43,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 
 			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
-		header('location: http://localhost/College-E-print-system/home.php');
+		header('location: http://localhost/College-E-print-system/index.html');
 		}
 
 	// 
@@ -98,7 +98,7 @@ if (isset($_POST['resetpsw'])) {
 		$mail->Host       = 'smtp.gmail.com';  # Specify main and backup SMTP servers
 		$mail->SMTPAuth   = true;                                   # Enable SMTP authentication
 		$mail->Username   = 'manthanraut16@gmail.com';                     # SMTP username
-		$mail->Password   = 'piyushraut123';                               # SMTP password
+		$mail->Password   = 'Piyushraut123';                               # SMTP password
 		$mail->SMTPSecure = 'tls';                                  # Enable TLS encryption, `ssl` also accepted
 		$mail->Port       = 587;                                    # TCP port to connect to
 	
