@@ -122,5 +122,5 @@ if (isset($_POST['resetpsw'])) {
 		$mail->send();
 		header('Location: http://localhost/College-E-print-system/signin.php');
 } catch (Exception $e) {
-    header( 'Location: http://localhost/College-E-print-system/test1.php' );
+    header( 'Location: http://localhost/College-E-print-system/step1.php' );
 }}
