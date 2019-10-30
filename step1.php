@@ -167,19 +167,25 @@ input.chkbox {
 
 	text-decoration:underline;
 }
-body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+@media only screen and (max-width:420px){
+	.loginBox
+{
+    box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.4);
+    position:absolute;
+	top:62%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:330px;
+	height:auto;
+	padding:60px 40px;
+	padding-bottom:40px;
+	box-sizing: border-box;
+	background-color:white;
+	border-radius:20px;
+	margin-bottom:50px;
+	
+}
+}
 </style>
 <script>
 function validateemail(form){
@@ -196,7 +202,7 @@ if(reg.test(Email.value)){
 	</head>
 	<body>
 	<ul>
-  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;">Home</a></li>
+  <li><a href="index.html" style="float:right;">Home</a></li>
   
 
 </ul>
@@ -206,7 +212,7 @@ if(reg.test(Email.value)){
 		<img src="imgs/icon.png" class="user">
 		<h2 style="color:black;font-size:30px;">Forgot Password</h2>
         <p style="color:black;font-size:13px">No Problem! Enter your email address below and we will send your password on your Email account</p>
-		<form action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail(this);">
+		<form action="server.php" method="POST" autocomplete="off" onsubmit="return validateemail(this);">
             <input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
 			<input type="submit" name="resetpsw"> 
 		</form>

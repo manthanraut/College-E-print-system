@@ -50,6 +50,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color:#e60000;
+  padding-bottom:7px;
 }
 
 li {
@@ -90,17 +91,14 @@ li a:hover:not(.active) {
 @media (min-width: 320px) and (max-width: 420px) {
 	.loginBox
 {
-	border-radius:20px;
-	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
-	position:absolute;
-	top:57%;
+	top:75%;
 	left:50%;
-	transform: translate(-50%, -50%);
-	width:350px;
-	height:450px;
-	padding:80px 40px;
+	width:330px;
+	height:auto;
+	padding-bottom:60px;
 	box-sizing: border-box;
 	background-color:white;
+	margin-bottom:50px;
 }
 }
 @media only screen  and (max-width: 349px) { 
@@ -122,19 +120,7 @@ input.chkbox {
 			width: 20px; 
 			height: 20px; 
 		}
-		body { 
-			animation: fadeInAnimation ease 3s; 
 		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
 	</style>
 	<script type="text/javascript">
 	function myFunction() {
@@ -160,16 +146,16 @@ display_c();
  </script>
 	<body onload=display_ct();>
 	<ul>
-  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
+  <li><a href="index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
 
 	<div class="loginBox">
 		
 		<img src="imgs/admin.jpg" class="user">
-		<h2 style="font-family:cursive;font-size:25px;background: -webkit-linear-gradient(lightgreen,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Admin LogIn</h2>
-		<form autocomplete="off" method="POST" action="http://localhost/College-E-print-system/server.php">
+		<h2 style="font-family:Times;font-size:25px;background: -webkit-linear-gradient(lightgreen,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Admin LogIn</h2>
+		<form autocomplete="off" method="POST" action="server.php">
 
 		<i class="fa fa-user icon"></i>	
 		<input type="text" name = "username" placeholder="Enter Username">
@@ -183,7 +169,6 @@ display_c();
 			 </table>
 
 			<input type="submit" name = "submitadmin" style="font-family:courier header;" value="Sign In As Admin">
-			<a href="http://localhost/College-E-print-system/step1.php" id="ps1"><p style="font-size:20px;font-family:new times roman;color:black;background: -webkit-linear-gradient(blue,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
 			
 		</form>
 	</div>

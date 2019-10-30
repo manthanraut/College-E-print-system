@@ -10,16 +10,16 @@
     margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: montserrat;
+  font-family: cortana;
   box-sizing: border-box;
 }
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-bottom:10px;
   overflow: hidden;
   background-color:#e60000;
-  font-family:new time roman;
+  font-family:Cortana;
 }
 
 li {
@@ -31,9 +31,9 @@ li a {
   display: block;
   color: white;
   text-align: center;
-
   padding: 14px 16px;
   text-decoration: none;
+  
 }
 
 li a:hover:not(.active) {
@@ -61,8 +61,11 @@ body{
 	left:50%;
 	transform: translate(-50%, -50%);
 	width:350px;
-	height:450px;
-	padding:80px 40px;
+  height:auto;
+  padding-bottom:60px;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:50px;
 	box-sizing: border-box;
 	background-color:white;
  
@@ -149,19 +152,22 @@ small{
 	border-radius:20%;
 }
 /* Samsung Galaxy S5 Portrait */    
-@media (min-width: 320px) and (max-width: 420px) {  
+@media only screen  and  (max-width: 430px) {  
   .container{
   box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
   position:absolute;
-	top:62%;
+	top:72%;
 	left:50%;
 	transform: translate(-50%, -50%);
 	width:300px;
-	height:auto;
-	padding:80px 40px;
+  height:auto;
+  font-family:cortana;
+  padding-bottom:60px;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top:50px;
 	box-sizing: border-box;
 	background-color:white;
- 
 }
 }
 @media only screen  and (max-width: 349px) { 
@@ -170,19 +176,7 @@ small{
   height:450px;
 }
 }
-body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+
 </style>
 <script type="text/javascript">
 function display_c(){
@@ -201,20 +195,20 @@ display_c();
     </head>
     <body  onload=display_ct();>
     <ul>
-  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
+  <li><a href="index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
+  <li><a href="contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 </ul>
-        <form action="http://localhost/College-E-print-system/validate1.php" method="POST" autocomplete="off">
+        <form action="validate1.php" method="POST" autocomplete="off">
         <div class="container">
         
             <div class="row">
                
                 <div class="row">
                     <div>
-                        <h3 class="text-left" style="text-align:center;background: -webkit-linear-gradient(white,red,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">USER verification</h3>
+                        <h3 class="text-left" style="text-align:center;background: -webkit-linear-gradient(white,red,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-family:">USER verification</h3>
                     </div>
             
                     <hr>
@@ -228,8 +222,8 @@ display_c();
                    
                         <input type="Email" class="form-control" name="raitmail" style="width:100%;" id='raitmailid' placeholder="Enter Rait mail id" required>
             </div>
-                <button type="submit" value="Submit" id="btn1">Submit</button>
-                <button type="reset" value="Reset" id="btn2">Reset</button>
+                <button type="submit" value="Submit" id="btn1" style="font-size:25px;">Submit</button>
+                <button type="reset" value="Reset" id="btn2" style="font-size:25px;">Reset</button>
             </div>
         </div>
         </div>

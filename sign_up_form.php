@@ -130,7 +130,6 @@ li a {
   display: block;
   color: white;
   text-align: center;
-
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -138,8 +137,6 @@ li a {
 li a:hover:not(.active) {
   background-color: white;
   color:black;
-
-
 }  
 .signup{
 position:absolute;
@@ -154,19 +151,21 @@ width:350px;
   background-color:white;
   border-radius:16px;
    }
-   @media (min-width: 320px) and (max-width: 420px) {
+
+   @media only screen and (max-width: 420px) {
     .signup{
 position:absolute;
 box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
 transform: translate(-50%, -50%);
-width:350px;
-  top:62%;
+width:330px;
+  top:80%;
   left:50%;
-  height:535px;
+  height:auto;
   padding:30px 40px;
   box-sizing: border-box;
   background-color:white;
   border-radius:16px;
+  margin-bottom:50px;
    }
   }
   @media only screen  and (max-width: 349px) { 
@@ -175,19 +174,7 @@ width:350px;
 width:330px;
   }
   }
-  body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+  
       </style>
     <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -232,12 +219,12 @@ display_c();
     </head>
     <body  onload=display_ct();>
     <ul>
-  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
+  <li><a href="index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="signin.php" style="float:right;"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
+  <li><a href="contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 </ul>
-        <form action="http://localhost/College-E-print-system/server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
+        <form action="server.php" method="POST" onsubmit="return validate(this)" autocomplete="off">
         <div class="signup">
             
             <div class="row">
@@ -251,7 +238,11 @@ display_c();
                            
                                 <input type="text" class="form-control" name="fullname" id='fname' placeholder="Enter fullname" style="border-bottom: 2px solid black;width:100%;color:black;" required>
                     </div>
-                <div class="row">
+                <div c
+                
+                
+                
+                lass="row">
                        
                             <input type="text" class="form-control" name="rollno" id="rollno" maxlength=8 style="border-bottom: 2px solid black;color:black;width:100%;" placeholder="Enter Roll No." required>
                 </div>

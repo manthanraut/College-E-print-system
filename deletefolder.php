@@ -22,7 +22,7 @@ $dirPath="doc/".$foldername;
     reset($objects);
     rmdir($dirPath);
     }
-	header("Location: http://localhost/College-E-print-system/admin.php");
+	header("Location: admin.php");
 }
 	?>
 fa-search

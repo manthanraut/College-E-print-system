@@ -7,7 +7,7 @@
   if (isset($_POST['logout'])) {
   	session_destroy();
   	unset($_SESSION['fullname']);
-  	header("location: http://localhost/College-E-print-system/signin.php");
+  	header("location: signin.php");
   }
 ?>
 <!DOCTYPE html>
@@ -22,19 +22,7 @@
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
               <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
   <style>
-    body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+   
     * {
 	box-sizing:border-box;
 }
@@ -52,9 +40,6 @@ body {
 	color: white;
 	background: crimson;
 	text-align: center;
-	border: 1px solid #B0C4DE;
-	border-bottom: none;
-	border-radius: 10px 10px 0px 0px;
 	padding: 20px;
 }
 form, .content {
@@ -123,6 +108,18 @@ a:hover, a:active {
   text-decoration: none;
   color:white;
 }
+@media only screen and (max-width:420px){
+  .header {
+	width: 100%;
+	color: white;
+	background: crimson;
+  padding-right: 0px;
+  padding:10px;
+}
+#name{
+  font-family:Times;
+}
+}
     </style>
     <script type="text/javascript">
 function display_c(){
@@ -147,13 +144,13 @@ display_c();
 
   <span id='ct' style="float:left;background-color:white;color:black;border:2px solid black;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
-	<p align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
+	<p id="name" align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
   <p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
   </div>
 
 <br /><br />
   <div class="container">
-   <h2 align="center">Make a folder by your Roll No. and Upload Your files inside it </a></h2>
+   <h2 align="center" style="font-family:Times;">Make a folder by your Roll No. and Upload Your files inside it </a></h2>
    <br />
    <div align="right">
     <button type="button" name="create_folder" id="create_folder" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Create</button>

@@ -28,19 +28,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/admin_demo.css">
     <style>
-      body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+     
     body, html {
   height: 100%;
 }
@@ -134,30 +122,31 @@ form.example::after {
   clear: both;
   display: table;
 }
-@media only screen and (max-width: 1300px) {
+
+@media only screen and (max-width: 420px) {
   #searchfield{
-margin-right:200px;
-margin-top:20px;
+border-radius:20px;
 }
 ul{
-  height:250px;
+  height:auto;
+}
+#gadget{
+border-radius:20px;
+}
+#files{
+
+}
+#logout{
+
 }
 }
-@media only screen and (max-width: 400px) {
-  #searchfield{
-    left:10%;
-margin-left:500px;
-margin-top:20px;
+input::placeholder {
+  color: red;
+  font-style:bold;
+  color:black;
+  opacity:1;
 }
-}
-@media only screen and (max-width: 325px) {
-  #searchfield{
-    left:20%;
-    right:5%;
-margin-left:500px;
-margin-top:20px;
-}
-}
+
 #searchfield{
   position:relative;
   float:right;
@@ -166,18 +155,30 @@ margin-top:20px;
 margin-right:100px;
 margin-top:20px;
 }
-.button {
-  background-color: orange; /* Green */
-  border: none;
-  color: black;
-  border:2px solid white;
-  font-size:19px;
-  margin-left:10px;
+#searchfield input[type="text"]
+{
+	border: none;
+	border-bottom: 1px solid black;
+	background-color:white;
+	outline:none;
+	color:black;
+  font-size: 16px;
+  font-family:Times;
+  border-radius:20px;
+}
+.button{
+  
+    width: auto;
+    height: auto;
+    background: #FBF402;
+    margin-left:10px;
   margin-top:18px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  border:2px solid white;
+    text-align: center;
+    border-radius: 15px;
+    color: black;
+    padding: 15px 32px;
+    font-family:Times;
 }
 .button:hover{
 color:white;
@@ -199,9 +200,9 @@ background-color:red;
     <body>
     <ul>
               <li><img src="imgs/a_icon.png" width="60" height="60" style="display:none;margin-top:16px;margin-left:20px;" class="d-inline-block align-top" alt="" ></li>
-              <li><a href="javascript:change()" class="button"><i class="fa fa-download" aria-hidden="true"></i> Download Gadget</a>
-              <li><a href="javascript:change2()" class="button">View Files</a>
-             <li><a class="button" href="admin_login.php?logout='1'" style="margin-top:18px;margin-left:10px;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
+              <li id="ligadget"><a href="javascript:change()" class="button" id="gadget"><i class="fa fa-download" aria-hidden="true"></i> Download Gadget</a>
+              <li id="lifiles"><a href="javascript:change2()" class="button" id="files">View Files</a>
+             <li id="lilogout"><a class="button" href="admin_login.php?logout='1'" id="logout" style="margin-top:18px;margin-left:10px;"><i class="fa fa-sign-out" aria-hidden="true"></i>LogOut</a></li>
             
               <form class="example" autocomplete="off"  method="post">
               <div id="searchfield" >
@@ -272,7 +273,7 @@ background-color:red;
                         <!-- END SIDEBAR USER TITLE -->
                         <!-- SIDEBAR BUTTONS -->
                 
-<form  method="post" action="http://localhost/College-E-print-system/deletefolder.php">
+<form  method="post" action="deletefolder.php">
 <h5 style="color:red;">Delete folder <i class="fa fa-trash " aria-hidden="true">: </i><input type="submit" name="delete" class="btn btn-danger btn-sm" value="<?php echo $rollno ;?>"></h5>
 </form>
                         
@@ -344,7 +345,7 @@ background-color:red;
         <form class="example" autocomplete="off"  method="post">
         <div style="background-color:white;width:100%;height:100px;">
               <div id="searchfield" >
-  <input type="text" placeholder="Enter month & year" style="width:74%;border:none;border-bottom:2px solid black;" name="year">
+  <input type="text" placeholder="Enter month & year" style="width:74%;border:none;background-color:#E0E0D7;opacity:0.9;" name="year">
   <button type="submit"><i class="fa fa-search"></i></button>
   </div></div>
 </form>

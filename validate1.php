@@ -9,17 +9,14 @@ $raitmail=mysqli_real_escape_string($conn,$_POST['raitmail']);
 if(count($_POST)>0) {
 	$result = mysqli_query($conn,"SELECT * FROM student_rait_data WHERE roll_no='" . $_POST["rollno"] . "' and rait_id = '". $_POST["raitmail"]."'");
 	$count  = mysqli_num_rows($result);
-	#$query=mysqli_query($conn,"select * from student_info where roll_no='" . $_POST["rollno"] . "' or rait_id='" . $_POST["raitmail"]."'");
-	#$count1=mysqli_num_rows($query);
+	
 	if($count==0) {
-		header( 'Location: http://localhost/College-E-print-system/verified.php' );
+		header( 'Location: verified.php' );
 	} else {
 		$_SESSION['raitmail'] = $raitmail;
 		#if ($count1==0){
-	header( 'Location: http://localhost/College-E-print-system/sign_up_form.php' );}
-	#else{
-		#header( 'Location: http://localhost/webapp/verified.php' );
-#	}
+	header( 'Location: sign_up_form.php' );}
+	
 }
 
 ?>

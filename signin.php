@@ -179,20 +179,21 @@ input.chkbox {
 	left:calc(50% - 50px);
 	border-radius:50%;
 }
-@media (min-width: 320px) and (max-width: 420px) { 
+@media only screen and (max-width: 420px) { 
 	.loginBox
 {
 	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
 	position:absolute;
-	top:65%;
+	top:85%;
 	left:50%;
 	transform: translate(-50%, -50%);
-	width:350px;
-	height:440px;
+	width:330px;
+	height:auto;
 	padding:80px 40px;
 	box-sizing: border-box;
 	background-color:white;
 	border-radius:20px;
+	margin-bottom:50px;
 	
 }
 }
@@ -203,19 +204,7 @@ input.chkbox {
 	width:320px;
 }
 }
-body { 
-			animation: fadeInAnimation ease 3s; 
-		
-			animation-fill-mode: forwards; 
-		} 
-		@keyframes fadeInAnimation { 
-			0% { 
-				opacity: 0; 
-			} 
-			100% { 
-				opacity: .9; 
-			} 
-    } 
+
 </style>
 <script type="text/javascript">
 function display_c(){
@@ -233,9 +222,9 @@ display_c();
 	</head>
 	<body onload=display_ct();>
 	<ul>
-  <li><a href="http://localhost/College-E-print-system/index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-  <li><a href="http://localhost/College-E-print-system/verified.php" style="float:right;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
-  <li><a href="http://localhost/College-E-print-system/contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
+  <li><a href="index.html" style="float:right;"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+  <li><a href="verified.php" style="float:right;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+  <li><a href="contacts.php" style="float:right;"><i class="fa fa-address-book" aria-hidden="true"></i> Contacts</a></li>
   <span id='ct' style="float:right;background-color:white;color:black;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);border:2px solid black;margin-top:15px;padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 </ul>
@@ -243,8 +232,8 @@ display_c();
 	<div class="loginBox">
 		
 		<img src="imgs/user.png" class="user">
-		<h2 style="font-family:cursive;font-size:30px;background: -webkit-linear-gradient(white,blue);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Log In Here</h2>
-		<form name="myform" action="http://localhost/College-E-print-system/server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
+		<h2 style="font-family:times;font-size:30px;background: -webkit-linear-gradient(black,blue);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Log In Here</h2>
+		<form name="myform" action="server.php" method="POST" autocomplete="off" onsubmit="return validateemail();">
 			<i class="fa fa-user icon"></i>	
 			<input type="email" name = "email" id ='email' placeholder="Enter Email" style="border-bottom: 1px solid black;" required>
 			<i class="fa fa-key icon"></i>
@@ -258,7 +247,7 @@ display_c();
 			 </table>
 
 			<input type="submit" name = "login_user" style="font-family:courier header;" value="Log In As User">
-			<a href="http://localhost/College-E-print-system/step1.php" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;background: -webkit-linear-gradient(black,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
+			<a href="step1.php" id ="ps"><p style="font-size:20px;color:black;font-family:new times roman;background: -webkit-linear-gradient(black,red);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Forget Password</p></a> 
 			
 		</form>
 	</div>

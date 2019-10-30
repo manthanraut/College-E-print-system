@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require 'C:\xampp\htdocs\vendor/autoload.php';
+require 'vendor/autoload.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -43,7 +43,7 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 
 			$_SESSION['email'] = $email;
 			$_SESSION['success'] = "You are now logged in";
-		header('location: http://localhost/College-E-print-system/index.html');
+		header('location: index.html');
 		}
 
 	// 
@@ -64,10 +64,10 @@ $db = mysqli_connect(DB_SERVER , DB_USER, DB_PASSWORD, DB_DATABASE);
 	  $_SESSION['email']=$email;
 	  $_SESSION['rollno']=$rollno;
       $_SESSION['success'] = "You are now logged in";
-        header( 'Location: http://localhost/College-E-print-system/userpage.php' );
+        header( 'Location: userpage.php' );
     }
     else{
-        header('Location: http://localhost/College-E-print-system/signin.php');
+        header('Location: signin.php');
         }
 }
 $flag=0;
@@ -77,10 +77,10 @@ if (isset($_POST['submitadmin'])) {
     $password = mysqli_real_escape_string($db, $_POST['adminpsw']);
 	if ($username=='admin' && $password=='Admin123'){
 		$_SESSION['username']=$username;
-		header( 'Location: http://localhost/College-E-print-system/admin.php' );
+		header( 'Location: admin.php' );
 	}
 	else{
-		header( 'Location: http://localhost/College-E-print-system/admin_login.php' );
+		header( 'Location: admin_login.php' );
 	}
 }
 if (isset($_POST['resetpsw'])) {
@@ -88,7 +88,7 @@ if (isset($_POST['resetpsw'])) {
 	$que1="SELECT full_name,password FROM student_info WHERE email='$email'";
 	$solution = mysqli_query($db, $que1);
 	$row = mysqli_fetch_assoc($solution);
-	$url="http://localhost/College-E-print-system/verified.php";
+	$url="verified.php";
 	$_SESSION['fullname']=$row["full_name"];
 	$_SESSION['password']=$row["password"];
 	try{
@@ -98,7 +98,7 @@ if (isset($_POST['resetpsw'])) {
 		$mail->Host       = 'smtp.gmail.com';  # Specify main and backup SMTP servers
 		$mail->SMTPAuth   = true;                                   # Enable SMTP authentication
 		$mail->Username   = 'manthanraut16@gmail.com';                     # SMTP username
-		$mail->Password   = 'Piyushraut123';                               # SMTP password
+		$mail->Password   = 'Thetruelegend16';                               # SMTP password
 		$mail->SMTPSecure = 'tls';                                  # Enable TLS encryption, `ssl` also accepted
 		$mail->Port       = 587;                                    # TCP port to connect to
 	
@@ -120,7 +120,7 @@ if (isset($_POST['resetpsw'])) {
 	   $mail->AltBody = 'Password forgot request';
 	
 		$mail->send();
-		header('Location: http://localhost/College-E-print-system/signin.php');
+		header('Location: signin.php');
 } catch (Exception $e) {
-    header( 'Location: http://localhost/College-E-print-system/step1.php' );
+    header( 'Location: step1.php' );
 }}

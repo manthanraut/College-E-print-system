@@ -123,42 +123,13 @@ body {
     border: 2px solid #73AD21;
     padding: 20px; 
     width: 200px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  }  
   a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {
       -webkit-border-radius: 0!important;
       -moz-border-radius: 0!important;
       border-radius: 0!important;
       display: block;
   }
-  /*.dashboard-stat, .portlet {
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -o-border-radius: 4px;
-  }*/
   .portlet {
       margin-top: 0;
       margin-bottom: 25px;
