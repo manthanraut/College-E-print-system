@@ -118,6 +118,24 @@ body {
 				opacity: .9; 
 			} 
     } 
+    @media only screen and (max-width: 420px) { 
+	.loginBox
+{
+	box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.6);
+	position:absolute;
+	top:85%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:330px;
+	height:auto;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background-color:white;
+	border-radius:20px;
+	margin-bottom:50px;
+	
+}
+}
 </style>
 <script type="text/javascript"> 
 function display_c(){
@@ -144,19 +162,6 @@ display_c();
   
 <div class="row">
   <div class="column">
-    <div class="card">
-  <img src="imgs/akilesh.png" alt="Akilesh" style="width:100%;">
-  <h1>Akilesh Salunkhe</h1>
-  <p>RAIT,D Y Patil University,Navi Mumbai</p>
-  <h4 style="color:red;">Mail ID:<br>akileshsalunkhe99@gmail.com</h4>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-github"></i> </a>
-    <a href="#"><i class="fa fa-linkedin"></i> </a>  
-    <a href="#"><i class="fa fa-facebook"></i> </a> 
-  </div>
-</div>
-    </div>
-  <div class="column">
     <div class="card" style="height:524px;width:380px;">
   <img src="imgs/manthan.png" alt="Manthan" style="width:100%;height:60%;">
   <h1>Manthan Raut</h1>
@@ -166,19 +171,6 @@ display_c();
     <a href="https://github.com/manthanraut"><i class="fa fa-github"></i> </a>   
     <a href="#"><i class="fa fa-linkedin"></i> </a>  
     <a href="#"><i class="fa fa-facebook"></i> </a> 
-  </div>
-</div>
-  </div>
-  <div class="column">
-    <div class="card">
-  <img src="imgs/shayantan.ico" alt="Shayantan" style="width:100%;">
-  <h1>Shayantan Santra</h1>
-  <p>RAIT,D Y Patil University,Navi Mumbai</p>
-  <h4 style="color:red;">Mail ID: shayantan.santra@gmail.com</h4>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-github"></i>  </a> 
-    <a href="#"><i class="fa fa-linkedin"></i>  </a>  
-    <a href="#"><i class="fa fa-facebook"></i>  </a> 
   </div>
 </div>
   </div>
