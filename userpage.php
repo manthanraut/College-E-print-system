@@ -1,13 +1,14 @@
 <?php 
   session_start(); 
-  // if (!isset($_SESSION['fullname'])) {
-  // 	$_SESSION['msg'] = "You must log in first";
-  // 	header('location: http://localhost/College-E-print-system/signin.php');
-  // }
+  if (!isset($_SESSION['fullname'])) {
+   	$_SESSION['msg'] = "You must log in first";
+   	header('location: signin.php');
+   }
   if (isset($_POST['logout'])) {
   	session_destroy();
   	unset($_SESSION['fullname']);
-  	header("location: signin.php");
+	echo '<script>alert("bye")</script>';
+  	#header("location: signin.php");
   }
 ?>
 <!DOCTYPE html>
@@ -145,7 +146,7 @@ display_c();
   <span id='ct' style="float:left;background-color:white;color:black;border:2px solid black;margin-top:30px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);padding:4px;border-radius:16px;margin-right:20px;"></span>
 
 	<p id="name" align="right" style="font-size:30px;margin-right:50px;">Welcome <strong><?php echo $_SESSION['fullname']; ?></strong></p>
-  <p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout='1'"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
+  <p align="right" style="margin-right:50px;"> <a id="logout" align="right" href="signin.php?logout=1"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a> </p>
   </div>
 
 <br /><br />
